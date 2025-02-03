@@ -9,12 +9,11 @@ export default {
     ],
     root: 'src/',
     publicDir: "../public/",
-    base: './',
+    base: '/',
     server:
     {
         host: true,
         open: !isCodeSandbox, // Open if it's not a CodeSandbox
-        historyApiFallback: true
     },
     build:
     {
