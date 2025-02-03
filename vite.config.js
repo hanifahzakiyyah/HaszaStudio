@@ -13,7 +13,8 @@ export default {
     server:
     {
         host: true,
-        open: !isCodeSandbox // Open if it's not a CodeSandbox
+        open: !isCodeSandbox, // Open if it's not a CodeSandbox
+        historyApiFallback: true
     },
     build:
     {
