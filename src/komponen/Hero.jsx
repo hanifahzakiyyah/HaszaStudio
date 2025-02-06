@@ -1,0 +1,73 @@
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+export default function Hero(){
+
+    const [scrollEnabled, setScrollEnabled] = useState(false);
+
+    useEffect(() => {
+      document.body.style.overflow = scrollEnabled ? "auto" : "hidden";
+    }, [scrollEnabled]);
+
+    const enableScrollAndScrollToSection = () => {
+        setScrollEnabled(true);
+        setTimeout(() => {
+          document.getElementById("porto")?.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Delay kecil agar efek scroll lebih natural
+    };
+
+
+    return (
+        <section className="container max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap h-screen overflow-hidden lg:pt-16">
+            
+            
+            <div 
+                className="w-full lg:w-1/2 h-[40vh] -mb-[30vh] text-gray-300 mx-auto lg:mx-2 my-[20%] text-center lg:text-left py-[10vh] md:py-[8vh] font-monos"
+            >
+                <motion.h1 
+                    className="text-2xl lg:mb-5" 
+                    style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{}}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                >Welcome to</motion.h1>
+                <motion.p
+                     className="text-5xl lg:mb-5" style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
+                     whileHover={{ scale: 1.05 }}
+                     whileTap={{ scale: 0.95 }}
+                     initial={{}}
+                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                >HZS Studio</motion.p>
+                <motion.button
+                    className="relative z-10 py-3 px-5 m-5
+                                 before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
+                                 before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)] 
+                                before:transition-all before:duration-300 before:ease-out"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{}}
+                    animate={{}}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    onClick={enableScrollAndScrollToSection}
+                >
+                    <span className="relative z-10">Go to Portfolio</span>
+                </motion.button>
+
+
+            </div>
+
+
+            <div className="mx-auto lg:mx-1 my-5 w-full lg:w-[75vw] lg:-mr-32 lg:mt-20 h-[90vh] bg-center bg-cover lg:bg-auto"
+                style={{
+                backgroundImage: "url('../hero.webp')",
+                maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 65%)",
+                WebkitMaskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 65%)"
+                }}>
+            </div>
+
+
+            
+        </section>
+    )
+}

@@ -12,6 +12,7 @@ export default {
       // }
       
       blur: {
+        s: "2px",
         xs: "1px",  // Blur kecil banget
         xxs: "0.5px" // Blur super kecil
       },

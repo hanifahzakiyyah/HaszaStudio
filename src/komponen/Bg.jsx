@@ -9,7 +9,7 @@ export default function Bg(){
       };
 
     return (
-        <div className="relative w-full h-screen">
+        <div className="absolute w-full h-screen">
             <motion.div
                 className="fixed top-0 left-0 w-full h-full -z-10"
                 variants={bgVariants}
@@ -20,7 +20,7 @@ export default function Bg(){
                 <img
                     src="/bg.webp"
                     alt="Background"
-                    className='scale-[500%] '
+                    className='scale-[500%] blur-xs md:blur-s lg:blur-sm'
                 />
             </motion.div>
         </div>

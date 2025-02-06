@@ -6,16 +6,14 @@
 
 @layer utilities {
   .text-shadow {
-    text-shadow: 0px 0px 10px #ffffffdd;
+    text-shadow: 3px 3px 3px #ffffffdd;
   }
   .bersinar{
     box-shadow: 0px 0px 5px #ffffffbb;
   }
-  .bayangan {
-    box-shadow: 0px 0px 10px #cbd5e1ff,  /* Shadow hanya ke bawah */
-                inset 0px -2px 5px #cbd5e188; /* Inset shadow hanya ke bawah */
-}
-
+  /* .bayangan {
+    box-shadow: 0px 3px 10px #cbd5e1ff, inset 0px -2px 5px #cbd5e188; 
+  } */
 }
 
 
