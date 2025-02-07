@@ -33,7 +33,6 @@ function App() {
 
     return (
         <>
-            <Navbar/>
             <Bg/>
             <Routes>
                 <Route path="/" element={<Home/>} />

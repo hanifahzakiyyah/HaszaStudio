@@ -8,7 +8,7 @@ export default function Navbar() {
         { name: "Team", href: "#" },
         { name: "Projects", href: "#" },
         { name: "Calendar", href: "#" },
-      ];
+    ];
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }} 
         exit={{ y: -100, opacity: 0 }} 
-        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }} // 🔥 
+        transition={{ duration: 1, delay:0.8, ease: [0.25, 1, 0.5, 1] }} // 🔥 
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">

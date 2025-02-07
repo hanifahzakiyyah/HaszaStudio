@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Hero(){
-
-    const [scrollEnabled, setScrollEnabled] = useState(false);
-
-    useEffect(() => {
-      document.body.style.overflow = scrollEnabled ? "auto" : "hidden";
-    }, [scrollEnabled]);
+export default function Hero({ setScrollEnabled }){
 
     const enableScrollAndScrollToSection = () => {
         setScrollEnabled(true);
@@ -16,13 +10,12 @@ export default function Hero(){
         }, 100); // Delay kecil agar efek scroll lebih natural
     };
 
-
     return (
         <section className="container max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap h-screen overflow-hidden lg:pt-16">
             
             
             <div 
-                className="w-full lg:w-1/2 h-[40vh] -mb-[30vh] text-gray-300 mx-auto lg:mx-2 my-[20%] text-center lg:text-left py-[10vh] md:py-[8vh] font-monos"
+                className="w-full lg:w-1/2 h-[40vh] -mb-[20vh] text-gray-300 mx-auto lg:mx-2 my-[20%] text-center lg:text-left py-[15vh] md:py-[8vh] font-monos "
             >
                 <motion.h1 
                     className="text-2xl lg:mb-5" 
@@ -40,10 +33,10 @@ export default function Hero(){
                      transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 >HZS Studio</motion.p>
                 <motion.button
-                    className="relative z-10 py-3 px-5 m-5
+                    className="relative z-10 py-3 px-5 m-5 backdrop-blur-sm
                                  before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
                                  before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)] 
-                                before:transition-all before:duration-300 before:ease-out"
+                                before:transition-all before:duration-300 before:ease-out "
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{}}
@@ -58,11 +51,11 @@ export default function Hero(){
             </div>
 
 
-            <div className="mx-auto lg:mx-1 my-5 w-full lg:w-[75vw] lg:-mr-32 lg:mt-20 h-[90vh] bg-center bg-cover lg:bg-auto"
+            <div className="mx-auto lg:mx-1 my-5 w-full lg:w-[75vw] lg:-mr-32 lg:mt-20 h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
                 style={{
                 backgroundImage: "url('../hero.webp')",
-                maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 65%)",
-                WebkitMaskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 65%)"
+                maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 63%)",
+                WebkitMaskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 63%)"
                 }}>
             </div>
 
