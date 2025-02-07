@@ -17,6 +17,14 @@ export default function Porto() {
         }, 300); 
     }, [selectedFilter]);
 
+    useEffect(() => {
+        portof.forEach((p) => {
+            const img = new Image();
+            img.src = `/porto/${p.file}`;
+        });
+    }, []);
+    
+
     return (
         <section className="container w-full mx-auto min-h-screen text-white font-monos flex flex-col">
             <div id="porto" className="-mt-16 lg:-mt-24 mb-24" />
@@ -38,21 +46,24 @@ export default function Porto() {
 
             {/* Filter Buttons */}
             <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto h-9 flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">
-                {["All", "Website", "Furniture", "Icon", "App"].map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => setSelectedFilter(category === selectedFilter || category === "All" ? "" : category)}
-                        className={`bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-3 py-1 rounded-full m-0 lg:m-3 transition-all duration-300 ${
-                            selectedFilter === category ? "bg-slate-600 text-white" : ""
-                        }`}
-                    >
-                        {category}
-                    </button>
-                ))}
+            {["All", "Website", "Furniture", "Icon", "App"].map((category) => (
+                <button
+                    key={category}
+                    onClick={() => setSelectedFilter(category === "All" ? "" : category)}
+                    className={`bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-3 py-1 rounded-full m-0 lg:m-3 transition-all duration-300 ${
+                        (selectedFilter === category || (category === "All" && selectedFilter === "")) 
+                        ? "bg-slate-600 text-white" 
+                        : ""
+                    }`}
+                >
+                    {category}
+                </button>
+            ))}
+
             </div>
 
             {/* Portfolio Items */}
-            <div className="w-full flex justify-start gap-5 flex-wrap mt-8">
+            <div className="w-full flex justify-center lg:justify-start gap-5 flex-wrap mt-8 transition-all duration-500">
                 <AnimatePresence>
                     {!isFiltering &&
                         filteredPorto.map((porto, i) => (
