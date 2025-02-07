@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Bg() {
     useEffect(() => {
         document.body.style.backgroundImage = `url("/bg.webp")`;
-        // document.body.style.animation = "bg-scrolling 5s linear infinite";
+        document.body.style.animation = "bg-scrolling 5s linear infinite";
         return () => {
             document.body.style.backgroundImage = "";
             document.body.style.animation = "";
