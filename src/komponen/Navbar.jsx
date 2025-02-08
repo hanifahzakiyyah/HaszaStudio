@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <motion.h1 
-              className="text-2xl bg-gradient-to-t from-cyan-600 to-cyan-300 bg-clip-text inline-block text-transparent select-none" 
+              className="text-2xl bg-gradient-to-t from-cyan-600 to-cyan-200 bg-clip-text inline-block text-transparent select-none" 
               style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)'}}
               whileHover={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
               whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
@@ -38,7 +38,7 @@ export default function Navbar() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-cyan-300 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-cyan-200 px-3 py-2 rounded-md text-sm font-medium"
                   style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)', }}
                   whileHover={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
                   whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>
           {/* Mobile menu button */}
           <button
-            className="sm:hidden text-cyan-300 hover:text-shadow focus:outline-none"
+            className="sm:hidden text-cyan-200 hover:text-shadow focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)'}}>
@@ -94,7 +94,7 @@ export default function Navbar() {
             <motion.a
                 key={item.name}
                 href={item.href}
-                className="block text-cyan-300 px-3 py-2 rounded-md text-base font-medium"
+                className="block text-cyan-200 px-3 py-2 rounded-md text-base font-medium"
                 style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)'}}
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
                 whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}

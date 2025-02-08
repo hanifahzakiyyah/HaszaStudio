@@ -1,11 +1,19 @@
 import { motion, AnimatePresence } from "framer-motion";
 import portof from "../data";
 import { useState, useEffect } from "react";
+import Popup from "./Popup";
 
 export default function Porto() {
     const [selectedFilter, setSelectedFilter] = useState("");
     const [displayedPorto, setDisplayedPorto] = useState(portof);
     const [isFiltering, setIsFiltering] = useState(false);
+    const [muncul, setMuncul] = useState(false);
+    const [id, setId] = useState()
+    
+    function munculkan (id) {
+        setMuncul(true)
+        setId(id)
+    }
 
     const handleFilterChange = (category) => {
         const newFilter = category === "All" ? "" : category;
@@ -71,12 +79,12 @@ export default function Porto() {
 
             {/* Portfolio Items */}
             <div className="w-full flex justify-center lg:justify-start gap-5 flex-wrap mt-8 transition-all duration-500">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="sync">
                     {!isFiltering && displayedPorto.map((porto, i) => (
                         <motion.div
                             key={porto.judul}
                             className="group text-center border border-gray-400 p-0 rounded-sm overflow-hidden relative"
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                            initial={{ opacity: 0.5, scale: 0.8, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.8, y: -20 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -87,17 +95,35 @@ export default function Porto() {
                                 className="w-44 lg:w-72 h-44 lg:h-72 object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
                             />
                             <div 
-                                className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"
+                                className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"
                             >
                                 <h4 className="text-[1rem] lg:text-2xl line-clamp-1 pointer-events-auto">{porto.judul}</h4>
                                 <p className="text-sm lg:text-lg hidden lg:inline-block line-clamp-2 pointer-events-auto">{porto.subJudul}</p>
                                 <div className="mt-5 text-[0.8rem] lg:text-lg pointer-events-auto">
-                                    <button className="bg-slate-400/30 backdrop-blur-sm border border-slate-400 px-3 w-2/3 py-1 rounded-full m-auto block mb-2">Details</button>
+                                    <motion.button 
+                                        className="bg-slate-400/30 backdrop-blur-sm border border-slate-400 px-3 w-2/3 py-1 rounded-full m-auto block mb-2"
+                                        onClick={() => {
+                                            const realIndex = portof.findIndex(p => p.judul === porto.judul);
+                                            munculkan(realIndex);
+                                        }}
+                                        whileHover={{scale: 1.1, transition: { duration: 0.3, ease: "easeOut" }}}
+
+                                    >Details</motion.button>
                                     <button className="bg-slate-400/30 backdrop-blur-sm border border-slate-400 px-3 w-2/3 py-1 rounded-full m-auto block">Zoom in</button>
                                 </div>
                             </div>
+
+                            
+                            
+                            
                         </motion.div>
                     ))}
+
+                    <Popup aidi={id} benarMuncul={muncul} onClose={() => {
+                            setMuncul(false);
+                            // if (typingTimeout) clearTimeout(typingTimeout);
+                        }}
+                    />
                 </AnimatePresence>
             </div>
         </section>
