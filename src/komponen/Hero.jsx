@@ -15,7 +15,7 @@ export default function Hero({ setScrollEnabled }){
             
             
             <div 
-                className="w-full lg:w-1/2 text-gray-300 my-[20%] text-center lg:text-left py-[15vh] lg:py-[8vh] font-monos "
+                className="w-full lg:w-1/2 ml-0 lg:ml-10 text-gray-300 my-[20%] text-center lg:text-left py-[15vh] lg:py-[8vh] font-monos "
             >
                 <motion.h1 
                     className="text-2xl lg:mb-5" 
