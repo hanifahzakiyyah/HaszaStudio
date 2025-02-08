@@ -38,7 +38,7 @@ export default function Porto() {
     }, []);
 
     return (
-        <section className="container w-full mx-auto min-h-screen text-white font-monos flex flex-col">
+        <section className="container w-full bg-slate-200 mx-auto min-h-screen text-white font-monos flex flex-col">
             <div id="porto" className="-mt-16 lg:-mt-24 mb-24" />
 
             <motion.h1 
@@ -78,7 +78,7 @@ export default function Porto() {
             </div>
 
             {/* Portfolio Items */}
-            <div className="container mx-auto flex justify-center lg:justify-start gap-5 flex-wrap mt-8 transition-all duration-500">
+            <div className="w-full flex justify-center lg:justify-start gap-5 flex-wrap mt-8 transition-all duration-500">
                 <AnimatePresence mode="sync">
                     {!isFiltering && displayedPorto.map((porto, i) => (
                         <motion.div
