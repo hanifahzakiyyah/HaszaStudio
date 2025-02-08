@@ -11,11 +11,11 @@ export default function Hero({ setScrollEnabled }){
     };
 
     return (
-        <section className="container max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap h-screen overflow-hidden lg:pt-16">
+        <section className="container mx-auto flex flex-col lg:flex-row justify-evenly items-center h-screen overflow-hidden lg:pt-16">
             
             
             <div 
-                className="w-full lg:w-1/2 h-[40vh] -mb-[20vh] text-gray-300 mx-auto lg:mx-2 my-[20%] text-center lg:text-left py-[15vh] md:py-[8vh] font-monos "
+                className="w-full lg:w-1/2 text-gray-300 my-[20%] text-center lg:text-left py-[15vh] lg:py-[8vh] font-monos "
             >
                 <motion.h1 
                     className="text-2xl lg:mb-5" 
@@ -51,7 +51,7 @@ export default function Hero({ setScrollEnabled }){
             </div>
 
 
-            <div className="mx-auto lg:mx-1 my-5 w-full lg:w-[75vw] lg:-mr-32 lg:mt-20 h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
+            <div className="w-full lg:w-[75vw] h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
                 style={{
                 backgroundImage: "url('../hero.webp')",
                 maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 63%)",
