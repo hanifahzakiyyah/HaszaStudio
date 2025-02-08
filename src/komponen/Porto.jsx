@@ -92,7 +92,7 @@ export default function Porto() {
                             <img
                                 src={`/porto/${porto.file}`}
                                 alt={porto.judul}
-                                className="w-44 lg:w-72 h-44 lg:h-72 object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
+                                className="w-44 lg:w-[270px] h-44 lg:h-[270px] object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
                             />
                             <div 
                                 className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"
