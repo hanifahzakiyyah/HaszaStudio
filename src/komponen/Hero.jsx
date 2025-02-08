@@ -2,20 +2,21 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Hero({ setScrollEnabled }){
+    const [showButtons, setShowButtons] = useState(false);
 
     const enableScrollAndScrollToSection = () => {
         setScrollEnabled(true);
         setTimeout(() => {
           document.getElementById("porto")?.scrollIntoView({ behavior: "smooth" });
-        }, 100); // Delay kecil agar efek scroll lebih natural
+        }, 100);
     };
 
     return (
-        <section className="container max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap h-screen overflow-hidden lg:pt-16">
+        <section className="container mx-auto flex flex-col lg:flex-row justify-evenly items-center h-screen overflow-hidden lg:pt-16">
             
             
             <div 
-                className="w-full lg:w-1/2 h-[40vh] -mb-[20vh] text-gray-300 mx-auto lg:mx-2 my-[20%] text-center lg:text-left py-[15vh] md:py-[8vh] font-monos "
+                className="w-full lg:w-1/2 ml-0 lg:ml-10 text-gray-300 my-[20%] text-center lg:text-left py-[15vh] lg:py-[8vh] font-monos "
             >
                 <motion.h1 
                     className="text-2xl lg:mb-5" 
@@ -32,26 +33,60 @@ export default function Hero({ setScrollEnabled }){
                      initial={{}}
                      transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 >HZS Studio</motion.p>
-                <motion.button
-                    className="relative z-10 py-3 px-5 m-5 backdrop-blur-sm
-                                 before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
-                                 before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)] 
-                                before:transition-all before:duration-300 before:ease-out "
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{}}
-                    animate={{}}
-                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                    onClick={enableScrollAndScrollToSection}
-                >
-                    <span className="relative z-10">Go to Portfolio</span>
-                </motion.button>
-
+                <div className="flex flex-col items-center">
+                    <motion.button
+                        className="relative z-10 py-3 px-5 m-5 backdrop-blur-sm
+                                   before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
+                                   before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)]
+                                   before:transition-all before:duration-300 before:ease-out "
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        onClick={setShowButtons}
+                    >
+                        <span className="relative z-10">Get Started!</span>
+                    </motion.button>
+        
+                    {showButtons && (
+                        <div className="flex flex-col items-center gap-4">
+                            <motion.button
+                                className="relative z-10 py-3 px-5 m-5 backdrop-blur-sm
+                                           before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
+                                           before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)]
+                                           before:transition-all before:duration-300 before:ease-out "
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                onClick={enableScrollAndScrollToSection}
+                            >
+                                <span className="relative z-10">Go to Portfolio</span>
+                            </motion.button>
+        
+                            <motion.button
+                                className="relative z-10 py-3 px-5 m-5 backdrop-blur-sm
+                                           before:content-[''] before:absolute before:inset-0 before:border before:border-sky-300
+                                           before:bg-sky-300/20 before:-z-10 before:[transform:skewX(-30deg)]
+                                           before:transition-all before:duration-300 before:ease-out "
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
+                                onClick={enableScrollAndScrollToSection}
+                            >
+                                <span className="relative z-10">About Us</span>
+                            </motion.button>
+                        </div>
+                    )}
+                </div> 
+                {/*end div button */}
 
             </div>
 
 
-            <div className="mx-auto lg:mx-1 my-5 w-full lg:w-[75vw] lg:-mr-32 lg:mt-20 h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
+            <div className="w-full lg:w-[75vw] h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
                 style={{
                 backgroundImage: "url('../hero.webp')",
                 maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 63%)",
