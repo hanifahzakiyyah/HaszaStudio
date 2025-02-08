@@ -51,8 +51,8 @@ export default function Popup({aidi, benarMuncul, onClose }){
                 className=" bg-slate-700/10 backdrop-blur-sm border border-slate-400 rounded-xl fixed z-[100] top-0 bottom-0 left-0 right-0 lg:top-24 lg:bottom-10 lg:left-10 lg:right-10 overflowy-scroll flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5 lg:gap-10 px-5 lg:px-10 pt-10 lg:pt-0"
                 initial={{scale:0, y:300}}
                 animate={{ scale: 1, y: 0, transition: { type: "spring", stiffness: 150, damping: 10 } }} 
-                exit={{ scale: 0, y: -300, transition: { duration: 0.3, ease: "easeOut" } }} 
-            >
+                exit={{ scale: 0, y: -290, transition: { duration: 0.3, ease: "easeOut" } }} 
+            > 
                 <motion.button
                     className="absolute top-4 right-4 lg:-top-4 lg:-right-4 scale-150 border border-slate-400 rounded-full bg-slate-700/80 shadow-md px-3 py-1"
                     onClick={handleClose}
