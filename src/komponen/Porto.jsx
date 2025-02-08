@@ -38,7 +38,7 @@ export default function Porto() {
     }, []);
 
     return (
-        <section className="container w-full bg-slate-200 mx-auto min-h-screen text-white font-monos flex flex-col">
+        <section className="container w-full mx-auto min-h-screen text-white font-monos flex flex-col">
             <div id="porto" className="-mt-16 lg:-mt-24 mb-24" />
 
             <motion.h1 
