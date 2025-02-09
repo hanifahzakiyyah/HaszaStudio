@@ -10,6 +10,7 @@ const portof = [
         judul: "bedcover mockup design",
         subJudul: "Modeled and Textured in Blender",
         tanggal: "oktober, 2024",
+        button: null,
         deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
     },
     {
@@ -23,6 +24,7 @@ const portof = [
         judul: "bedcover in the room scene",
         subJudul: "Modeled and Textured in Blender",
         tanggal: "july, 2024",
+        button: null,
         deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
     },
     {
@@ -35,24 +37,27 @@ const portof = [
         judul: "Hardsurface - Car Velg",
         subJudul: "Modeled and Textured in Blender",
         tanggal: "january, 2025",
+        button: null,
         deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing 3d website project."
       },
         {
           filter : "Website",
           file : "urfah.webp",
-          files : "https://myplatform.vip/urfah/",
+          link : "https://myplatform.vip/urfah/",
           judul: "Urfah Website",
           subJudul: "you can open 3d world here by double clicking on the object you want",
           tanggal: "oktober, 2024",
+          button: "Show Website",
           deskripsi: ""
         },
         {
           filter : "Website",
           file : "3d-showcases.webp",
-          files : "3d-showcases/index.html",
+          link : "3d-showcases/index.html",
           judul: "Wiggle objects, and other 3d presentation",
           subJudul: "i made this fully in react-three-fiber",
           tanggal: "December 2024",
+          button: "Show Website",
           deskripsi: ""
         },
         {
@@ -67,6 +72,7 @@ const portof = [
           judul: "Armchair in Luxury Scene",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "oktober, 2024",
+          button: null,
           deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
         },
         {
@@ -79,7 +85,9 @@ const portof = [
           judul: "Cosmetik 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "Mei, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/cosmetics-39' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/cosmetics-39"
         },
         {
           filter : "Icon",
@@ -91,7 +99,9 @@ const portof = [
           judul: "Ramadhan 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "oktober, 2022",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/ramadan-2058' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/ramadan-2058"
         },
         {
           filter : "Furniture",
@@ -105,6 +115,7 @@ const portof = [
           judul: "Tree-house in the forest",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "oktober, 2024",
+          button: null,
           deskripsi: "the tree-house in the forest. i wanna sleep there peacefully. i wanna go there now. who wanna follow me? hahaha."
         },
         {
@@ -119,6 +130,7 @@ const portof = [
           judul: "Little Yellow Sofa",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "oktober, 2024",
+          button: null,
           deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
         },
         {
@@ -131,7 +143,9 @@ const portof = [
           judul: "Camping 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "july, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/camping-602' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/camping-602"
         },
         {
           filter : "Furniture",
@@ -145,6 +159,7 @@ const portof = [
           judul: "Wooden Armchair",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "oktober, 2024",
+          button: null,
           deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
         },
         {
@@ -159,6 +174,7 @@ const portof = [
             judul: "Woven Armchair in Outdoor Scene",
             subJudul: "Modeled and Textured in Blender",
             tanggal: "oktober, 2024",
+            button: null,
             deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
         },
         {
@@ -171,7 +187,9 @@ const portof = [
           judul: "Devices 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "march, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/devices-113' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/devices-113"
         },
         {
           filter : "Icon",
@@ -183,7 +201,9 @@ const portof = [
           judul: "Social Media 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "June, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/free-3d-illustration-pack/media-logo' target='__blank' class='link-icon'>this link</a> freely, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/free-3d-illustration-pack/media-logo"
         },
         {
             filter : "Furniture",
@@ -196,15 +216,17 @@ const portof = [
             judul: "Bedcover and Pillows",
             subJudul: "Modeled and Textured in Blender",
             tanggal: "Oktober 2024",
+            button: null,
             deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing mockup project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
         },
         {
             filter : "Website",
             file : "web-lebaran.webp",
-            files : "lebaran/index.html",
+            link : "lebaran/index.html",
             judul: "Eid el-Fithr Mubarok",
             subJudul: "scroll and drag mouse to interact with this website. press the link to go to the website!",
             tanggal: "",
+            button: "Show Website",
             deskripsi: ""
         },
         {
@@ -218,15 +240,17 @@ const portof = [
           judul: "dining table and chairs",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "oktober, 2023",
+          button: null,
           deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
       },
         {
             filter : "Website",
             file : "dirgahayu.webp",
-            files : "dirgahayu/index.html",
+            link : "dirgahayu/index.html",
             judul: "Dirgahayu Indonesia",
             subJudul: "you can turn the phone on by clicking white button. go to website and try it!",
             tanggal: "",
+            button: "Show Website",
             deskripsi: ""
         },
         {
@@ -236,33 +260,37 @@ const portof = [
             judul: "Shorf - verbs in arabic",
             subJudul: "you can enter the word, and the app will transform it to everything in shorf",
             tanggal: "",
+            button: null,
             deskripsi: ""
         },
         {
             filter : "Website",
             file : "link.webp",
-            files : "linkScroll/index.html",
+            link : "linkScroll/index.html",
             judul: "campaign of linktree in 3d",
             subJudul: "if you open the website in PC you just have to scroll it and enjoy.",
             tanggal: "",
+            button: "Show Website",
             deskripsi: ""
         },
         {
             filter : "Website",
             file : "gameDash.webp",
-            files : "gamedash/index.html",
+            link : "gamedash/index.html",
             judul: "Geometry dash in 3d",
             subJudul: "use space and arrow to control the box.",
             tanggal: "",
+            button: "Show Website",
             deskripsi: ""
         },
         {
             filter : "Website",
             file : "pesawat.webp",
-            files : "pesawat/index.html",
+            link : "pesawat/index.html",
             judul: "Scroll and enjoy the flight",
             subJudul: "R3F personal project",
             tanggal: "november 2024",
+            button: "Show Website",
             deskripsi: ""
         },
         {
@@ -275,7 +303,9 @@ const portof = [
           judul: "Robot 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "july, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/robot-with-emotion' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/robot-with-emotion"
         },
         {
           filter : "Furniture",
@@ -288,6 +318,7 @@ const portof = [
           judul: "sofa in living room scene",
           subJudul: "Modeled and Textured in Blender",
           tanggal: "September, 2023",
+          button: null,
           deskripsi: "Modeled and textured in blender 3d. I made this one while i am doing interior project. Due to client rights, I cannot display the entire work, so I render each piece of furniture individually."
       },
         {
@@ -300,7 +331,9 @@ const portof = [
           judul: "School 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "july, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/school-284' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/school-284"
         },
         {
           filter : "Icon",
@@ -312,7 +345,9 @@ const portof = [
           judul: "Bakery 3d Icon Pack",
           subJudul: "stylized quad topology. check wireframe in the detail page",
           tanggal: "july, 2024",
-          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in <a href='https://iconscout.com/3d-illustration-pack/cake-and-bakery-2' target='__blank' class='link-icon'>this link</a>, you will get the PNG file, Blend file, also GLB file."
+          button: "to Iconscout",
+          deskripsi: "modeled in quad topology. use them for your design. if you download them from iconscout in the link below, you will get the blend file, PNG file, also GLB file. ",
+          link: "https://iconscout.com/3d-illustration-pack/cake-and-bakery-2"
         },
 ]
 

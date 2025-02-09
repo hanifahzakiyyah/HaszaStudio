@@ -97,7 +97,7 @@ export default function Porto() {
                             <div 
                                 className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"
                             >
-                                <h4 className="text-[1rem] lg:text-2xl line-clamp-1 pointer-events-auto">{porto.judul}</h4>
+                                <h4 className="text-[1rem] lg:text-2xl line-clamp-none lg:line-clamp-1 pointer-events-auto capitalize">{porto.judul}</h4>
                                 <p className="text-sm lg:text-lg hidden lg:inline-block line-clamp-2 pointer-events-auto">{porto.subJudul}</p>
                                 <div className="mt-5 text-[0.8rem] lg:text-lg pointer-events-auto">
                                     <motion.button 
@@ -109,7 +109,6 @@ export default function Porto() {
                                         whileHover={{scale: 1.1, transition: { duration: 0.3, ease: "easeOut" }}}
 
                                     >Details</motion.button>
-                                    <button className="bg-slate-400/30 backdrop-blur-sm border border-slate-400 px-3 w-2/3 py-1 rounded-full m-auto block">Zoom in</button>
                                 </div>
                             </div>
 

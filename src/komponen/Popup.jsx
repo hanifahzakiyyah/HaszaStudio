@@ -70,14 +70,15 @@ export default function Popup({aidi, benarMuncul, onClose }){
                 </div>
 
                 <div className="px-3 lg:px-10 font-monos bg-slate-700/80 backdrop-blur-lg border border-slate-400 rounded-xl flex flex-col justify-center h-[45%] max-h-[42vh] lg:h-[75vh] lg:max-h-[75vh] w-[100%] lg:w-[50%] p-5">
-                    <h2 className="text-2xl lg:text-4xl">{typedText.judul}</h2>
-                    <p className="text-sm mb-3 lg:text-xl">{typedText.tanggal}</p>
+                    <h2 className="text-2xl lg:text-4xl capitalize">{typedText.judul}</h2>
+                    <p className="text-sm mb-3 lg:text-xl capitalize">{typedText.tanggal}</p>
                     <h3 className="text-sm lg:text-xl">{typedText.subJudul}</h3>
                     <p className="text-sm lg:text-xl">{typedText.deskripsi}</p>
                     <motion.a 
-                        className="px-5 py-3 border border-slate-400 rounded-full bg-slate-500/50 shadow-md mt-10 w-fit"
+                        className={`${portof[aidi].button ? "visible" : "invisible" } px-5 py-3 border border-slate-400 rounded-full bg-slate-500/50 shadow-md mt-10 w-fit`}
+                        href={portof[aidi].link}
                     >
-                        {portof[aidi].link}coba button
+                        {portof[aidi].button}
                     </motion.a>
                 </div>
 
