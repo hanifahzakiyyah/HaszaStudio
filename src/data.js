@@ -43,6 +43,7 @@ const portof = [
         {
           filter : "Website",
           file : "urfah.webp",
+          files: null,
           link : "https://myplatform.vip/urfah/",
           judul: "Urfah Website",
           subJudul: "you can open 3d world here by double clicking on the object you want",
@@ -53,6 +54,7 @@ const portof = [
         {
           filter : "Website",
           file : "3d-showcases.webp",
+          files: null,
           link : "3d-showcases/index.html",
           judul: "Wiggle objects, and other 3d presentation",
           subJudul: "i made this fully in react-three-fiber",
@@ -222,6 +224,7 @@ const portof = [
         {
             filter : "Website",
             file : "web-lebaran.webp",
+            files: null,
             link : "lebaran/index.html",
             judul: "Eid el-Fithr Mubarok",
             subJudul: "scroll and drag mouse to interact with this website. press the link to go to the website!",
@@ -246,6 +249,7 @@ const portof = [
         {
             filter : "Website",
             file : "dirgahayu.webp",
+            files: null,
             link : "dirgahayu/index.html",
             judul: "Dirgahayu Indonesia",
             subJudul: "you can turn the phone on by clicking white button. go to website and try it!",
@@ -266,6 +270,7 @@ const portof = [
         {
             filter : "Website",
             file : "link.webp",
+            files: null,
             link : "linkScroll/index.html",
             judul: "campaign of linktree in 3d",
             subJudul: "if you open the website in PC you just have to scroll it and enjoy.",
@@ -276,6 +281,7 @@ const portof = [
         {
             filter : "Website",
             file : "gameDash.webp",
+            files: null,
             link : "gamedash/index.html",
             judul: "Geometry dash in 3d",
             subJudul: "use space and arrow to control the box.",
@@ -286,6 +292,7 @@ const portof = [
         {
             filter : "Website",
             file : "pesawat.webp",
+            files: null,
             link : "pesawat/index.html",
             judul: "Scroll and enjoy the flight",
             subJudul: "R3F personal project",

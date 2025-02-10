@@ -16,32 +16,35 @@ export default function Hero({ setScrollEnabled }){
             
             
             <div 
-                className="w-full lg:w-1/2 ml-0 lg:ml-10 text-gray-300 my-[20%] lg:my-[20vh] text-center lg:text-left py-[9vh] lg:py-[8vh] font-monos"    
+                className="w-full lg:w-1/2 ml-0 lg:ml-[10vw] text-gray-300 my-[10%] lg:my-[20vh] text-center lg:text-left py-[9vh] lg:py-[5vh] font-monos"
             >
                 <motion.h1 
-                    className="text-2xl lg:mb-5" 
+                    className="text-2xl lg:text-3xl lg:mb-5" 
                     style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
-                    whileHover={{ scale: 1.2, originX:0 }}
-                    whileTap={{ scale: 1.2, originX:0 }}
+                    whileHover={{}}
+                    whileTap={{}}
                     initial={{}}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >Welcome to</motion.h1>
-                <motion.p
-                     className="text-5xl lg:mb-5" style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
-                     whileHover={{ scale: 1.1, originX:0 }}
-                     whileTap={{ scale: 1.1, originX:0 }}
-                     initial={{}}
-                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >HZS Studio</motion.p>
+                >Buat Website 3D dan<br />Animasi Interaktif memukau <br /> bersama <br /> 
+                    <motion.span
+                        className="text-5xl lg:text-6xl block my-5 mb-7"
+                        whileHover={{ scale: 1.1, originX:0 }}
+                        whileTap={{ scale: 1.1, originX:0 }}
+                        initial={{}}
+                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    >
+                        HZS Studio</motion.span>
+                </motion.h1>
+                
                 <div className="flex flex-col items-center lg:items-start">
                     <motion.button
-                        className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl "
+                        className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-base lg:text-xl"
                         whileHover={{ scaleX: 1.5, originX:0}}
                         whileTap={{ scaleX: 1.5, originX:0 }}
                         // transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         onClick={setShowButtons}
                     >
-                        <span className="z-10">Get Started!</span>
+                        <span className="z-10">Mulai Sekarang!</span>
                     </motion.button>
 
                     {/* <motion.div className="relative w-52 h-20 before:absolute before:w-5 before:h-5 before:border-t-2 before:border-l-2 before:border-white before:top-0 before:left-0
@@ -60,7 +63,7 @@ export default function Hero({ setScrollEnabled }){
                     {showButtons && (
                         <div className="flex flex-col items-start gap-1 ml-10">
                             <motion.button
-                                className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl"
+                                className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
                                 whileHover={{ scaleX: 1.3, originX:0 }}
                                 whileTap={{ scaleX: 1.3, originX:0 }}
                                 initial={{ opacity: 0, y: -20}}
@@ -72,7 +75,7 @@ export default function Hero({ setScrollEnabled }){
                             </motion.button>
         
                             <motion.button
-                                className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl"
+                                className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
                                 whileHover={{ scaleX: 1.5, originX:0 }}
                                 whileTap={{ scaleX: 1.5, originX:0 }}
                                 initial={{ opacity: 0, y: -20}}

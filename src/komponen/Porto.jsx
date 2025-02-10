@@ -78,7 +78,7 @@ export default function Porto() {
             </div>
 
             {/* Portfolio Items */}
-            <div className="w-full flex justify-center lg:justify-start gap-5 flex-wrap mt-8 transition-all duration-500">
+            <div className="w-full flex justify-center lg:justify-center gap-5 flex-wrap mt-8 transition-all duration-500">
                 <AnimatePresence mode="sync">
                     {!isFiltering && displayedPorto.map((porto, i) => (
                         <motion.div
