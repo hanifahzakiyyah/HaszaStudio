@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 export default function Hero({ setScrollEnabled }){
     const [showButtons, setShowButtons] = useState(false);
 
-    const enableScrollAndScrollToSection = () => {
+    const enableScrollAndScrollToSection = (sec) => {
         setScrollEnabled(true);
         setTimeout(() => {
-          document.getElementById("porto")?.scrollIntoView({ behavior: "smooth" });
+          document.getElementById(sec)?.scrollIntoView({ behavior: "smooth" });
         }, 100);
     };
 
     return (
-        <section className="container relative mx-auto h-screen overflow-hidden lg:pt-16">
+        <section id="hero" className="container relative mx-auto h-screen overflow-hidden lg:pt-16">
             
             
             <div 
@@ -46,19 +46,6 @@ export default function Hero({ setScrollEnabled }){
                     >
                         <span className="z-10">Mulai Sekarang!</span>
                     </motion.button>
-
-                    {/* <motion.div className="relative w-52 h-20 before:absolute before:w-5 before:h-5 before:border-t-2 before:border-l-2 before:border-white before:top-0 before:left-0
-                    after:absolute after:w-5 after:h-5 after:border-t-2 after:border-r-2 after:border-white after:top-0 after:right-0"
-                        whileHover={{scale:1.1}}
-                        whileTap={{scale:1.1}}
-                    >
-                        <div className="absolute w-5 h-5 border-b-2 border-l-2 border-white bottom-0 left-0"></div>
-                        <div className="absolute w-5 h-5 border-b-2 border-r-2 border-white bottom-0 right-0"></div>
-
-                        <div className="flex items-center justify-center h-full">
-                            <p className="text-center">Hello, Tailwind!</p>
-                        </div>
-                    </motion.div> */}
         
                     {showButtons && (
                         <div className="flex flex-col items-start gap-1 ml-10">
@@ -69,7 +56,7 @@ export default function Hero({ setScrollEnabled }){
                                 initial={{ opacity: 0, y: -20}}
                                 animate={{ opacity: 1, y: 0}}
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                                onClick={enableScrollAndScrollToSection}
+                                onClick={()=>enableScrollAndScrollToSection("porto")}
                             >
                                 <span className="z-10">Go to Portfolio</span>
                             </motion.button>
@@ -81,9 +68,9 @@ export default function Hero({ setScrollEnabled }){
                                 initial={{ opacity: 0, y: -20}}
                                 animate={{ opacity: 1, y: 0}}
                                 transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
-                                onClick={enableScrollAndScrollToSection}
+                                onClick={()=>enableScrollAndScrollToSection("layanan")}
                             >
-                                <span className="z-10">About Us</span>
+                                <span className="z-10">Layanan</span>
                             </motion.button>
                         </div>
                     )}

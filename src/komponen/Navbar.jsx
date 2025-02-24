@@ -4,16 +4,16 @@ import '../style.css'
 
 export default function Navbar() {
     const navigation = [
-        { name: "Dashboard", href: "#" },
-        { name: "Team", href: "#" },
-        { name: "Projects", href: "#" },
+        { name: "Home", href: "#hero" },
+        { name: "Portfolio", href: "#porto" },
+        { name: "Layanan", href: "#layanan" },
         { name: "Calendar", href: "#" },
     ];
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.nav 
-        className="border-b border-slate-400 shadow-lg shadow-slate-500/50 text-shadow bg-slate-700/60 backdrop-blur-sm font-monos w-[100%] rounded-b-2xl fixed z-40"
+        className="border-b border-slate-400 shadow-lg shadow-slate-500/50 bg-slate-700/60 backdrop-blur-sm font-monos w-[100%] rounded-b-2xl fixed z-40"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }} 
         exit={{ y: -100, opacity: 0 }} 

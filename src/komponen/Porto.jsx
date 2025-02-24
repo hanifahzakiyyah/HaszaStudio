@@ -41,7 +41,7 @@ export default function Porto() {
         <section className="container w-full mx-auto min-h-screen text-white font-monos flex flex-col">
             <div id="porto" className="-mt-16 lg:-mt-24 mb-24" />
 
-            <motion.h1 
+            <motion.h2 
                 className="text-md lg:text-xl lg:mb-5 mx-auto mt-5 lg:mt-0"
                 style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
                 whileHover={{ scale: 1.2 }}
@@ -49,16 +49,16 @@ export default function Porto() {
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
                 Portfolio
-            </motion.h1>
-            <motion.h1 
+            </motion.h2>
+            <motion.h2 
                 className="lg:mb-5 mx-auto text-2xl lg:text-4xl -mt-0 lg:-mt-3"
                 style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-                Check Our Latest Work
-            </motion.h1>
+                Karya Terbaru Kami
+            </motion.h2>
 
             {/* Filter Buttons */}
             <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto h-9 flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">

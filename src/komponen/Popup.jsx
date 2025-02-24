@@ -87,7 +87,7 @@ export default function Popup({aidi, benarMuncul, onClose }){
                 </motion.button>
 
                 <div className="lg:basis-[40%] lg:max-w-[45%] flex overflow-hidden relative">
-                    {portof[aidi].files && (
+                    {(portof[aidi].files) ? (
                         <motion.div 
                             className="flex max-w-[45vh] lg:max-w-[75vh]"
                             animate={{ x: -currentIndex * 100 + "%" }}
@@ -99,24 +99,35 @@ export default function Popup({aidi, benarMuncul, onClose }){
                             {portof[aidi].files.map((file, i) => (
                                 <img key={i} 
                                     src={`/porto/${file}`} 
-                                    alt={`Contoh design 3D HZS-studio | Slide ${i + 1}`} 
+                                    alt={`Contoh design 3D HZS-studio | ${portof[aidi].judul} ${i + 1}`} 
                                     className="w-full h-auto max-h-[45vh] lg:max-h-[75vh] m-auto shadow-lg rounded-xl bg-slate-700/80 backdrop-blur-lg border border-slate-400"
                                     draggable="false"
                                 />
                             ))}
                         </motion.div>
+                    ) : (
+                        <div className="max-w-[45vh] lg:max-w-[75vh] flex">
+                            <motion.img
+                                src={`/porto/${portof[aidi].file}`}
+                                className="select-none w-full h-auto max-h-[45vh] lg:max-h-[75vh] m-auto shadow-lg rounded-xl"
+                                whileHover={{scale:1.05, rotate: -3, transition: {type:"spring", stiffness: 300, damping:10}}}
+                                whileTap={{scale:1.05, rotate: -3, transition: {type:"spring", stiffness: 300, damping:10}}}
+                            />
+                        </div>
                     )}
-                    {portof[aidi].files && (
+                    {(portof[aidi].files) ? (
                         <>
                             <button onClick={handlePrev} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-600/50 p-2 rounded-full">◀</button>
                             <button onClick={handleNext} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-600/50 p-2 rounded-full">▶</button>
-                        </>
-                    )}
-                    <div className="absolute bottom-2 lg:bottom-32 left-1/2 transform -translate-x-1/2 flex gap-2">
-                        {portof[aidi].files.map((_, i) => (
-                            <div key={i} className={`w-2 h-2 rounded-full ${i === currentIndex ? "bg-white" : "bg-gray-500"}`}></div>
-                        ))}
-                    </div>
+                        
+                            <div className="absolute bottom-2 lg:bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2">
+                                {portof[aidi].files.map((_, i) => (
+                                    <div key={i} className={`w-2 h-2 rounded-full ${i === currentIndex ? "bg-white" : "bg-gray-500"}`}></div>
+                                ))}
+                            </div>
+                        </>   
+                    ) : "" }
+                    
                 </div>
 
                 <div className="px-3 lg:px-10 font-monos bg-slate-700/80 backdrop-blur-lg border border-slate-400 rounded-xl flex flex-col 
