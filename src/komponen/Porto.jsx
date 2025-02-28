@@ -42,13 +42,13 @@ export default function Porto() {
             <div id="porto" className="-mt-16 lg:-mt-24 mb-24" />
 
             <motion.h2 
-                className="text-md lg:text-xl lg:mb-5 mx-auto mt-5 lg:mt-0"
+                className="text-sm lg:text-xl lg:mb-5 mx-auto mt-5 lg:mt-0"
                 style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 1.2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-                Portfolio
+                P O R T F O L I O
             </motion.h2>
             <motion.h2 
                 className="lg:mb-5 mx-auto text-2xl lg:text-4xl -mt-0 lg:-mt-3"
@@ -97,7 +97,7 @@ export default function Porto() {
                             <div 
                                 className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"
                             >
-                                <h4 className="text-[1rem] lg:text-2xl line-clamp-none lg:line-clamp-1 pointer-events-auto capitalize">{porto.judul}</h4>
+                                <h3 className="text-[1rem] lg:text-2xl line-clamp-none lg:line-clamp-1 pointer-events-auto capitalize">{porto.judul}</h3>
                                 <p className="text-sm lg:text-lg hidden lg:inline-block line-clamp-2 pointer-events-auto">{porto.subJudul}</p>
                                 <div className="mt-5 text-[0.8rem] lg:text-lg pointer-events-auto">
                                     <motion.button 

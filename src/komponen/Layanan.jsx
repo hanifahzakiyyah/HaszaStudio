@@ -40,14 +40,16 @@ export default function Layanan() {
           style={{ filter: "drop-shadow(0px 0px 15px #ffffff88)" }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.2 }}
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           Layanan 3D Premium untuk Proyek Anda
         </motion.h2>
 
-        <p className="text-gray-200 text-sm lg:text-lg font-monos mb-12 lg:text-center lg:max-w-[800px] m-auto">
+        <motion.p className="text-gray-200 text-sm lg:text-lg font-monos mb-12 lg:text-center lg:max-w-[800px] m-auto" initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 300, damping: 10 }}>
           Kami hadirkan layanan 3D terbaik dengan detail presisi dan animasi memukau. Temukan solusi sesuai kebutuhan Anda!
-        </p>
+        </motion.p>
 
           <Swiper
             modules={[Pagination, Autoplay ]}
@@ -56,14 +58,15 @@ export default function Layanan() {
             slidesPerView={1}
             className="mySwiper -mt-10"
             autoplay={{ delay: 3000, disableOnInteraction: false }}
+          
           >
             {services.map((service, index) => (
               <SwiperSlide key={index}>
                 <div className="py-3 font-monos pb-10 text-right lg:text-center">
-                  <h3 className="text-md lg:text-2xl font-semibold text-gray-200 mb-2 mt-64 lg:mt-80">
+                  <motion.h3 initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 300, damping: 10 }} className="text-md lg:text-2xl font-semibold text-gray-200 mb-2 mt-64 lg:mt-80" >
                     {service.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm lg:text-lg lg:max-w-[600px] lg:m-auto">{service.description}</p>
+                  </motion.h3>
+                  <motion.p initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 300, damping: 10 }} className="text-gray-200 text-sm lg:text-lg lg:max-w-[600px] lg:m-auto">{service.description}</motion.p>
                 </div>
               </SwiperSlide>
             ))}
