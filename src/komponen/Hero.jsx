@@ -72,6 +72,18 @@ export default function Hero({ setScrollEnabled }){
                             >
                                 <span className="z-10">Layanan</span>
                             </motion.button>
+                            
+                            <motion.button
+                                className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
+                                whileHover={{ scaleX: 1.5, originX:0 }}
+                                whileTap={{ scaleX: 1.5, originX:0 }}
+                                initial={{ opacity: 0, y: -20}}
+                                animate={{ opacity: 1, y: 0}}
+                                transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
+                                onClick={()=>enableScrollAndScrollToSection("keunggulan")}
+                            >
+                                <span className="z-10">Keunggulan</span>
+                            </motion.button>
                         </div>
                     )}
                 </div> 

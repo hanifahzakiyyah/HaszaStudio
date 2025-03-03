@@ -7,9 +7,10 @@ export default function Navbar() {
         { name: "Home", href: "#hero" },
         { name: "Portfolio", href: "#porto" },
         { name: "Layanan", href: "#layanan" },
-        { name: "Calendar", href: "#" },
+        { name: "Keunggulan", href: "#keunggulan" },
     ];
   const [isOpen, setIsOpen] = useState(false);
+
 
   return (
     <motion.nav 
@@ -59,21 +60,23 @@ export default function Navbar() {
               <motion.line
                 x1="4" y1="6" x2="20" y2="6"
                 strokeWidth="2" strokeLinecap="round"
-                animate={{y2: isOpen ? 18 : 6}}
+                initial={{ y2: 6 }}
+                animate={{y2: isOpen === true ? 18 : 6}}
                 transition={{ duration: 0.3 }}
               />
               {/* Garis tengah */}
               <motion.line
                 x1="4" y1="12" x2="20" y2="12"
                 strokeWidth="2" strokeLinecap="round"
-                animate={{ scaleX: isOpen ? 0 : 1}}
+                animate={{ scaleX: isOpen === true ? 0 : 1}}
                 transition={{ duration: 0.2 }}
               />
               {/* Garis bawah */}
               <motion.line
                 x1="4" y1="18" x2="20" y2="18"
                 strokeWidth="2" strokeLinecap="round"
-                animate={{y2: isOpen ? 6 : 18}}
+                initial={{ y2: 18 }}
+                animate={{y2: isOpen === true ? 6 : 18}}
                 transition={{ duration: 0.3 }}
               />
             </svg>

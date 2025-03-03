@@ -22,23 +22,25 @@ const advantages = [
   {
     title: "Teknologi Terkini",
     description: "Kami menggunakan software dan teknik terbaru untuk memastikan hasil yang modern dan kompetitif."
+  },
+  {
+    title: "Ramah Revisi",
+    description: "Terbuka untuk revisi kalau pekerjaan kami belum sesuai dengan brief."
   }
 ];
 
 export default function Keunggulan() {
 
-    const [isExpanded1, setIsExpanded1] = useState(false);
-    const [isExpanded2, setIsExpanded2] = useState(false);
-    const [isExpanded3, setIsExpanded3] = useState(false);
-    const [isExpanded4, setIsExpanded4] = useState(false);
-    const [isExpanded5, setIsExpanded5] = useState(false);
+  const [expanded, setExpanded] = useState(Array(advantages.length).fill(false));
 
-    const exArr = [isExpanded1, isExpanded2, isExpanded3, isExpanded4, isExpanded5]
-    const exSet = [setIsExpanded1, setIsExpanded2, setIsExpanded3, setIsExpanded4, setIsExpanded5]
+  const toggleExpand = (index) => {
+    setExpanded((prev) => prev.map((val, i) => (i === index ? !val : val)));
+  };
+
     
 
   return (
-    <section id="keunggulan" className="py-16 rounded-3xl shadow-xl lg:-mt-64">
+    <section id="keunggulan" className="py-16 rounded-3xl shadow-xl lg:-mt-64 font-monos">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.p
           className="font-monos text-white text-sm"
@@ -46,7 +48,7 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          K E U N T U N G A N
+          K E U N G G U L A N
         </motion.p>
         <motion.h2
           className="text-white text-2xl lg:text-4xl font-bold mb-6"
@@ -70,21 +72,22 @@ export default function Keunggulan() {
           {advantages.map((adv, i)=>(
             <motion.div
                 className="relative bg-slate-200/10 backdrop-blur-sm p-6 shadow-lg overflow-hidden m-auto group"
-                animate={{ maxWidth: exArr[i] ? "100%" : "90px", maxHeight: exArr[i] ? "100%" : "80px" }}
-                onClick={() => exSet[i] (!exArr[i])}
+                animate={{ maxWidth: expanded[i] ? "100%" : "90px", maxHeight: expanded[i] ? "100%" : "80px" }}
+                onClick={() => toggleExpand(i)}
                 transition={{ duration: 0.3, ease: "backOut" }}
                 initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}  
+                whileInView={{ opacity: 1, y: 0 }} 
+                key={i} 
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={exArr[i] ? "check" : "arrow"}
+                  key={expanded[i] ? "check" : "arrow"}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  {exArr[i] ? (
+                  {expanded[i] ? (
                     <CheckCircle className="text-slate-200 w-10 h-10 mb-4 m-auto" strokeWidth={2} />
                   ) : (
                     <LucideCircleArrowDown className="text-slate-200 w-10 h-10 mb-4 m-auto" strokeWidth={2} />
@@ -102,28 +105,28 @@ export default function Keunggulan() {
                 {/* Sudut Kanan Atas */}
                 <motion.div
                   className="absolute right-0 top-0 w-12 h-10 border-t-4 border-r-4 border-slate-200 pojok"
-                  animate={{ clipPath: exArr[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
+                  animate={{ clipPath: expanded[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
 
                 {/* Sudut Kiri Atas */}
                 <motion.div
                   className="absolute left-0 top-0 w-12 h-10 border-t-4 border-l-4 border-slate-200 pojok"
-                  animate={{ clipPath: exArr[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
+                  animate={{ clipPath: expanded[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
 
                 {/* Sudut Kanan Bawah */}
                 <motion.div
                   className="absolute right-0 bottom-0 w-12 h-10 border-b-4 border-r-4 border-slate-200 pojok"
-                  animate={{ clipPath: exArr[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
+                  animate={{ clipPath: expanded[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
 
                 {/* Sudut Kiri Bawah */}
                 <motion.div
                   className="absolute left-0 bottom-0 w-12 h-10 border-b-4 border-l-4 border-slate-200 pojok"
-                  animate={{ clipPath: exArr[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
+                  animate={{ clipPath: expanded[i] ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
 

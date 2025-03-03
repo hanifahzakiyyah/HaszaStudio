@@ -3,6 +3,18 @@ import { motion } from "framer-motion";
 
 const AnimatedSVG = () => {
 
+  const pathVariants = {
+    initial: { 
+      d: "M26.671033 281.05286 L38.963621 293.34545", 
+      opacity: 1 
+    },
+    animate: { 
+      d: "M25.79484 290.74085 L29.657476 294.60348", 
+      opacity: 0.2 
+    }
+  };
+  
+
   return (
     <div className="w-[100vw] h-[100vh] lg:w-[115vh] lg:h-[97vw] m-auto lg:-mt-96 lg:rotate-90 pl-0 lg:pl-52 select-none">
       <svg
@@ -71,33 +83,29 @@ const AnimatedSVG = () => {
           whileTap={{ d: "M 199.1545,52.27814 V 285.09022 L 183.24782,269.18355 V 36.37146 Z" }}
           transition={{ duration: 0.5, ease: "easeInOut" }} 
           id="path32" className="select-none"/>
-
+        
         <path fill="#ffffff" fillOpacity={1} stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} d="M 21.262293,141.77784 V 258.06572" id="path33" />
 
-        <motion.path 
-          fill="none" 
-          stroke="#ffffff" 
-          strokeWidth={3.61379} 
-          strokeLinecap="butt" 
-          strokeLinejoin="miter" 
-          strokeDasharray="none" 
+
+        <motion.path
+          fill="none"
+          stroke="#ffffff"
+          strokeWidth={3.61379}
+          strokeLinecap="butt"
+          strokeLinejoin="miter"
+          strokeDasharray="none"
           strokeOpacity={1}
-          animate={{
-            d: [
-              "m 26.671033,281.05286 12.292588,12.29259", 
-              "m 25.79484,290.74085 3.862636,3.86263"
-            ],
-            opacity: [1, 0.2]
-          }}
+          variants={pathVariants}
+          initial="initial"
+          animate="animate"
           transition={{
-            times: [0, 1], // Ini membantu Framer memahami timeline
             duration: 0.4,
             ease: "easeInOut",
             repeat: Infinity,
             repeatType: "loop"
           }}
-          id="path34"
         />
+
 
 
 
