@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://domainmu.com/sitemap.xml
