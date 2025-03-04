@@ -42,7 +42,7 @@ function App() {
 
 root.render(
     <>
-        {isDev ? <StrictMode><BrowserRouter future={{ v7_startTransition: true }}><App /></BrowserRouter></StrictMode> : <App />}
+        {isDev ? <StrictMode><BrowserRouter future={{ v7_startTransition: true }}><App /></BrowserRouter></StrictMode> : <BrowserRouter future={{ v7_startTransition: true }}><App /></BrowserRouter>}
     
     </>
 );
