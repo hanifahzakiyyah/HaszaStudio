@@ -12,7 +12,7 @@ export default function Bg() {
     }, []);
 
     return (
-        <div className="flex items-center justify-center h-screen bg-slate-900 absolute -z-50">
+        <div className="flex items-center justify-center h-screen bg-slate-900 absolute">
 
             {/* Tailwind Inline Animation */}
             <style>
