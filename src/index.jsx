@@ -11,24 +11,24 @@ const root = ReactDOM.createRoot(document.querySelector('#root'));
 const isDev = process.env.NODE_ENV === "development";
 
 function App() {
-    const location = useLocation();
+    // const location = useLocation();
 
-    useEffect(() => {
-        const rootEl = document.querySelector("#root");
-        if (location.pathname === "/3d") {
-            rootEl.style.position = "fixed";
-            rootEl.style.top = "0";
-            rootEl.style.left = "0";
-            rootEl.style.width = "100vw";
-            rootEl.style.height = "100vh";
-        } else {
-            rootEl.style.position = "";
-            rootEl.style.top = "";
-            rootEl.style.left = "";
-            rootEl.style.width = "";
-            rootEl.style.height = "";
-        }
-    }, [location.pathname]);
+    // useEffect(() => {
+    //     const rootEl = document.querySelector("#root");
+    //     if (location.pathname === "/3d") {
+    //         rootEl.style.position = "fixed";
+    //         rootEl.style.top = "0";
+    //         rootEl.style.left = "0";
+    //         rootEl.style.width = "100vw";
+    //         rootEl.style.height = "100vh";
+    //     } else {
+    //         rootEl.style.position = "";
+    //         rootEl.style.top = "";
+    //         rootEl.style.left = "";
+    //         rootEl.style.width = "";
+    //         rootEl.style.height = "";
+    //     }
+    // }, [location.pathname]);
 
     return (
         <Suspense fallback={<div className="loading">Loading...</div>}>
