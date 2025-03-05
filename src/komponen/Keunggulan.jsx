@@ -70,9 +70,13 @@ export default function Keunggulan() {
           transition={{ duration: 0.6 }}
         >
           tap panah untuk membuka atau{" "}
-          <span className="cursor-pointer underline relative z-10" onClick={bukaSemua}>
+          <motion.span className="cursor-pointer underline relative z-10" 
+            onClick={bukaSemua}
+            initial={{scale:1, rotate:0}}
+            whileHover={{scale:1.5, rotate:30}}
+          >
             buka semua
-          </span>
+          </motion.span>
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -1,19 +1,31 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { PauseCircle, PlayCircle, ArrowUp } from "lucide-react";
 
 export default function Bg() {
+    const [isAnimating, setIsAnimating] = useState(true);
+    const [showTooltip, setShowTooltip] = useState(null); // null = tidak ada tooltip
+
     useEffect(() => {
         document.body.style.backgroundImage = `url("/bg.webp")`;
-        document.body.style.animation = "bg-scrolling 5s linear infinite";
+
+        if (isAnimating) {
+            document.body.style.animation = "bg-scrolling 5s linear infinite";
+        } else {
+            document.body.style.animation = "none";
+        }
+
         return () => {
-            document.body.style.backgroundImage = "";
             document.body.style.animation = "";
         };
-    }, []);
+    }, [isAnimating]);
+
+    // Fungsi untuk scroll ke atas
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     return (
         <div className="flex items-center justify-center h-screen bg-slate-900 absolute">
-
             {/* Tailwind Inline Animation */}
             <style>
                 {`
@@ -22,50 +34,40 @@ export default function Bg() {
                 }
                 `}
             </style>
+
+            {/* Tombol Stop/Mulai Animasi */}
+            <button 
+                onClick={() => setIsAnimating(!isAnimating)}
+                onMouseEnter={() => setShowTooltip("animasi")}
+                onMouseLeave={() => setShowTooltip(null)}
+                className="fixed z-10 bottom-24 right-4 bg-slate-700/10 backdrop-blur-sm border border-white text-white p-3 rounded shadow-lg hover:bg-gray-700 transition"
+            >
+                <div className="relative w-full h-full flex items-center justify-center">
+                    {isAnimating ? <PauseCircle size={24} /> : <PlayCircle size={24} />}
+                    {showTooltip === "animasi" && (
+                        <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded transition">
+                            {isAnimating ? "Stop animasi background" : "Mulai animasi background"}
+                        </span>
+                    )}
+                </div>
+            </button>
+
+            {/* Tombol Scroll ke Atas */}
+            <button 
+                onClick={scrollToTop}
+                onMouseEnter={() => setShowTooltip("scroll")}
+                onMouseLeave={() => setShowTooltip(null)}
+                className="fixed z-10 bottom-4 right-4 bg-slate-700/10 backdrop-blur-sm border border-white text-white p-3 rounded shadow-lg hover:bg-gray-700 transition"
+            >
+                <div className="relative w-full h-full flex items-center justify-center">
+                    <ArrowUp size={24} />
+                    {showTooltip === "scroll" && (
+                        <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded transition">
+                            Kembali ke atas
+                        </span>
+                    )}
+                </div>
+            </button>
         </div>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import {motion} from 'framer-motion'
-
-// export default function Bg(){
-
-//     const bgVariants = {
-//         start: { x: 500, y: 100 },
-//         mid: { x: -100, y: 300 }, 
-//         end: { x: 200, y: 250 }
-//       };
-
-//     return (
-//         <div className="absolute w-full h-screen">
-//             <motion.div
-//                 className="fixed top-0 left-0 w-full h-full -z-10"
-//                 variants={bgVariants}
-//                 initial="start"
-//                 animate={["mid", "end"]}
-//                 transition={{ repeat: Infinity, repeatType: "reverse", duration: 10, ease: "easeInOut" }}
-//             >
-//                 <img
-//                     src="/bg.webp"
-//                     alt="Background"
-//                     className='scale-[500%] blur-xs md:blur-s lg:blur-sm'
-//                 />
-//             </motion.div>
-//         </div>
-//     )
-// }

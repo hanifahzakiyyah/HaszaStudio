@@ -2,7 +2,7 @@ import { Facebook, Instagram, Github, Phone } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-700/50 backdrop-blur-sm p-10 mt-32 font-mono text-white">
+        <footer className="bg-slate-700/50 backdrop-blur-sm p-10 mt-32 font-monos text-white">
             <div className="flex flex-col lg:flex-row justify-center gap-6">
                 {/* Brand Section */}
                 <div>

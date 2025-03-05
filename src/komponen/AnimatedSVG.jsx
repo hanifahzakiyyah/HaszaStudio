@@ -53,30 +53,31 @@ const AnimatedSVG = () => {
 
         </defs>
         
-        
-        <path fill="#d9d9c9" fillOpacity={1} stroke="none" d="m 25.65,105.39 0.18,27.99 3.779999,0.09 -0.09,-30.24 L 20.16,94.139998 18.922319,95.60862 17.37,97.019998" id="path21" filter="url(#filter21)"/>
-        <rect fill="#d9d9c9" fillOpacity={1} stroke="none"
-        filter="url(#filter19)" id="rect19" width="94.049995" height="3.8700001" x="59.399998" y="291.06" />
-        <path fill="#334155aa" stroke="#ffffff" strokeWidth={0.722759}strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 48.77993,292.96441 H 198.37219 L 177.07638,271.66858 V 31.330004 L 154.82442,9.0780421 H 10.186687 V 86.872982 l 17.471265,17.471278 v 167.75893 z" id="path1" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 116.14425,2.6458334 h 42.07011 l 15.559,15.5589936" id="path2" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,36.371466 199.1545,52.27814" id="path3" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,44.194421 199.1545,60.101096" id="path4" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,53.0009 199.1545,68.907574" id="path5" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,60.823855 199.1545,76.730529" id="path6" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,69.630333 199.1545,85.537007" id="path7" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,77.453288 15.90668,15.90667" id="path8" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,86.259759 199.1545,102.16645" id="path9" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,94.082721 199.1545,109.98941" id="path10" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,102.88921 15.90668,15.90668" id="path11" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,110.71218 15.90668,15.90666" id="path12" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,119.51864 15.90668,15.90668" id="path13" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,127.3416 15.90668,15.90668" id="path14" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,136.14808 15.90668,15.90668" id="path15" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,143.97104 15.90668,15.90667" id="path16" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,152.77751 15.90668,15.90667" id="path17" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,160.60047 15.90668,15.90668" id="path18" />
-        <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,269.18355 15.90668,15.90667" id="path31" />
-        
+        <g>
+          <path fill="#d9d9c9" fillOpacity={1} stroke="none" d="m 25.65,105.39 0.18,27.99 3.779999,0.09 -0.09,-30.24 L 20.16,94.139998 18.922319,95.60862 17.37,97.019998" id="path21" filter="url(#filter21)"/>
+          <rect fill="#d9d9c9" fillOpacity={1} stroke="none"
+          filter="url(#filter19)" id="rect19" width="94.049995" height="3.8700001" x="59.399998" y="291.06" />
+          <path fill="#334155aa" stroke="#ffffff" strokeWidth={0.722759}strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 48.77993,292.96441 H 198.37219 L 177.07638,271.66858 V 31.330004 L 154.82442,9.0780421 H 10.186687 V 86.872982 l 17.471265,17.471278 v 167.75893 z" id="path1" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 116.14425,2.6458334 h 42.07011 l 15.559,15.5589936" id="path2" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,36.371466 199.1545,52.27814" id="path3" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,44.194421 199.1545,60.101096" id="path4" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,53.0009 199.1545,68.907574" id="path5" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,60.823855 199.1545,76.730529" id="path6" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,69.630333 199.1545,85.537007" id="path7" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,77.453288 15.90668,15.90667" id="path8" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,86.259759 199.1545,102.16645" id="path9" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,94.082721 199.1545,109.98941" id="path10" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,102.88921 15.90668,15.90668" id="path11" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,110.71218 15.90668,15.90666" id="path12" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,119.51864 15.90668,15.90668" id="path13" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,127.3416 15.90668,15.90668" id="path14" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,136.14808 15.90668,15.90668" id="path15" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,143.97104 15.90668,15.90667" id="path16" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,152.77751 15.90668,15.90667" id="path17" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,160.60047 15.90668,15.90668" id="path18" />
+          <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} d="m 183.24782,269.18355 15.90668,15.90667" id="path31" />
+        </g>
+
         <motion.path fill="#ffffff" fillOpacity={1} stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="butt" strokeLinejoin="miter" strokeDasharray="none" strokeOpacity={1} 
           initial={{ d: "M 199.1545,176.50715 V 285.09022 L 183.24782,269.18355 V 160.60047 Z" }}
           whileHover={{ d: "M 199.1545,52.27814 V 285.09022 L 183.24782,269.18355 V 36.37146 Z" }}

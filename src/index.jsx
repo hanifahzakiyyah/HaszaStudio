@@ -31,7 +31,7 @@ function App() {
     // }, [location.pathname]);
 
     return (
-        <Suspense fallback={<div className="loading">Loading...</div>}>
+        <Suspense fallback={<div className="loading flex justify-center items-center h-[100vh] w-[100vw]">Loading...</div>}>
             <Bg />
             <Routes>
                 <Route path="/" element={<Home />} />
