@@ -2,7 +2,7 @@
 
 Selamat datang di repository proyek **HZS Studio**! 🚀
 
-Proyek ini merupakan website showcase interaktif berbasis **React Three Fiber (R3F)**, di mana pengguna dapat berinteraksi dengan model 3D secara real-time. Website ini dibangun dengan teknologi modern untuk memberikan pengalaman eksplorasi produk yang lebih menarik.
+Proyek ini merupakan website showcase interaktif, di mana pengguna dapat berinteraksi dengan konten yang ada didalam website. Website ini dibangun dengan teknologi modern untuk memberikan pengalaman eksplorasi produk yang lebih menarik.
 
 ## 🔗 Akses Website
 
