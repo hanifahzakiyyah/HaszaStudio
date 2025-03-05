@@ -4,6 +4,8 @@ import Porto from './Porto.jsx'
 import Navbar from './Navbar';
 import Layanan from './Layanan.jsx';
 import Keunggulan from './Keunggulan.jsx';
+import About from './About.jsx';
+import Footer from './Footer.jsx';
 
 
 export default function Home(){
@@ -21,6 +23,8 @@ export default function Home(){
         <Porto />
         <Layanan/>
         <Keunggulan/>
+        <About/>
+        <Footer/>
     </>
     )
 }

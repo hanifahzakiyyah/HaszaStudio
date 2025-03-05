@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     extend: {
-      
+      scrollBehavior: ["smooth"],
       blur: {
         s: "2px",
         xs: "1px",  
@@ -15,7 +15,7 @@ export default {
       },
 
       fontFamily:{
-        "monos" : ["Space Mono", "sans-serif"],
+        "monos" : ["Space Mono", "monospace"],
       }
     },
   },

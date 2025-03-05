@@ -64,7 +64,7 @@ export default function Layanan() {
         </motion.p>
         
         <motion.h2
-          className="text-white text-2xl lg:text-4xl font-bold text-center lg:mb-5 mx-auto lg:-mt-[360px] font-monos"
+          className="text-white text-2xl lg:text-4xl font-bold text-center lg:mb-20 mx-auto lg:-mt-[360px] font-monos"
           style={{ filter: "drop-shadow(0px 0px 15px #ffffff88)" }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.2 }}
@@ -87,7 +87,7 @@ export default function Layanan() {
             {services.map((service, index) => (
               <SwiperSlide key={service.id}>
                 <div className="py-3 font-monos pb-10 text-center flex flex-col lg:flex-row items-center justify-evenly">
-                  {animations.length > 0 ? <Lottie key={index} animationData={animations[index]} className="w-84 mt-10"/> : null}
+                  {animations.length > 0 ? <Lottie key={index} animationData={animations[index]} className="w-72 mt-10"/> : null}
                   <div>
                     <motion.h3 initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 300, damping: 10 }} className="text-md lg:text-2xl font-semibold text-gray-200 mb-2 " >
                       {service.title}

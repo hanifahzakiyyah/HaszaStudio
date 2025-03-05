@@ -58,7 +58,7 @@ export default function Hero({ setScrollEnabled }){
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                                 onClick={()=>enableScrollAndScrollToSection("porto")}
                             >
-                                <span className="z-10">Go to Portfolio</span>
+                                <span className="z-10">Lihat Portfolio</span>
                             </motion.button>
         
                             <motion.button
@@ -70,7 +70,7 @@ export default function Hero({ setScrollEnabled }){
                                 transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
                                 onClick={()=>enableScrollAndScrollToSection("layanan")}
                             >
-                                <span className="z-10">Layanan</span>
+                                <span className="z-10">Layanan & Produk</span>
                             </motion.button>
                             
                             <motion.button
@@ -80,9 +80,9 @@ export default function Hero({ setScrollEnabled }){
                                 initial={{ opacity: 0, y: -20}}
                                 animate={{ opacity: 1, y: 0}}
                                 transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
-                                onClick={()=>enableScrollAndScrollToSection("keunggulan")}
+                                onClick={()=>enableScrollAndScrollToSection("about")}
                             >
-                                <span className="z-10">Keunggulan</span>
+                                <span className="z-10">Tentang Kami</span>
                             </motion.button>
                         </div>
                     )}

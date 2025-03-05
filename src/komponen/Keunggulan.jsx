@@ -37,6 +37,11 @@ export default function Keunggulan() {
     setExpanded((prev) => prev.map((val, i) => (i === index ? !val : val)));
   };
 
+  const bukaSemua = () => {
+    setExpanded((prev) => prev.map(() => true));
+  };
+  
+
     
 
   return (
@@ -64,19 +69,23 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          (tap panah untuk membuka)
+          tap panah untuk membuka atau{" "}
+          <span className="cursor-pointer underline relative z-10" onClick={bukaSemua}>
+            buka semua
+          </span>
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {advantages.map((adv, i)=>(
             <motion.div
-                className="relative bg-slate-200/10 backdrop-blur-sm p-6 shadow-lg overflow-hidden m-auto group"
+                className="relative cursor-pointer bg-slate-200/10 backdrop-blur-sm p-6 shadow-lg overflow-hidden m-auto group"
                 animate={{ maxWidth: expanded[i] ? "100%" : "90px", maxHeight: expanded[i] ? "100%" : "80px" }}
                 onClick={() => toggleExpand(i)}
                 transition={{ duration: 0.3, ease: "backOut" }}
-                initial={{ opacity: 0, y: -30 }}
+                initial={{ opacity: 0, y: -30, scale:1 }}
                 whileInView={{ opacity: 1, y: 0 }} 
+                whileHover={{scale:1.1}}
                 key={i} 
             >
               <AnimatePresence mode="wait">

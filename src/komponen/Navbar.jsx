@@ -4,10 +4,10 @@ import '../style.css'
 
 export default function Navbar() {
     const navigation = [
-        { name: "Home", href: "#hero" },
-        { name: "Portfolio", href: "#porto" },
-        { name: "Layanan", href: "#layanan" },
-        { name: "Keunggulan", href: "#keunggulan" },
+        { name: "Beranda", href: "#hero" },
+        { name: "Lihat Portfolio", href: "#porto" },
+        { name: "Layanan & Produk", href: "#layanan" },
+        { name: "Tentang Kami", href: "#about" },
     ];
   const [isOpen, setIsOpen] = useState(false);
 
@@ -102,6 +102,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
                 whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                onClick={()=>setIsOpen(false)}
             >
                 {item.name}
             </motion.a>
