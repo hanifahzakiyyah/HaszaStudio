@@ -12,8 +12,8 @@ const advantages = [
     description: "Kami siap mendengarkan kebutuhan Anda dan memberikan solusi terbaik dengan komunikasi yang cepat."
   },
   {
-    title: "Proses Efisien",
-    description: "Dengan workflow yang terorganisir, proyek Anda selesai tepat waktu tanpa mengorbankan kualitas."
+    title: "Ramah SEO",
+    description: "Untuk kebutuhan Website, struktur HTML, gambar, link dan lain-lainnya sudah mendukung SEO."
   },
   {
     title: "Kustom Sesuai Kebutuhan",

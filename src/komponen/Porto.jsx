@@ -83,7 +83,7 @@ export default function Porto() {
                     {!isFiltering && displayedPorto.map((porto, i) => (
                         <motion.div
                             key={porto.judul}
-                            className="group text-center border border-gray-400 p-0 rounded-sm overflow-hidden relative"
+                            className="group text-center border border-gray-400 p-0 rounded-sm overflow-hidden relative w-fit max-[376px]:w-[80vw]"
                             initial={{ opacity: 0.5, scale: 0.8, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.8, y: -20 }}
@@ -92,7 +92,7 @@ export default function Porto() {
                             <img
                                 src={`/porto/${porto.file}`}
                                 alt={porto.judul}
-                                className="w-44 lg:w-[270px] h-44 lg:h-[270px] object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
+                                className="w-44 lg:w-[270px] max-[376px]:w-[80vw] h-44 lg:h-[270px] object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
                             />
                             <div 
                                 className="absolute z-20 bg-slate-800/70 top-0 left-0 right-0 bottom-0 py-7 px-3 flex flex-col justify-between opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 pointer-events-none"

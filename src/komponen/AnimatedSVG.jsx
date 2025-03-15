@@ -20,7 +20,7 @@ const AnimatedSVG = () => {
       <svg
         viewBox="0 0 210 297"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full select-none"
+        className="w-full h-full select-none "
       >
         <defs>
           <filter id="blur">
@@ -57,7 +57,7 @@ const AnimatedSVG = () => {
           <path fill="#d9d9c9" fillOpacity={1} stroke="none" d="m 25.65,105.39 0.18,27.99 3.779999,0.09 -0.09,-30.24 L 20.16,94.139998 18.922319,95.60862 17.37,97.019998" id="path21" filter="url(#filter21)"/>
           <rect fill="#d9d9c9" fillOpacity={1} stroke="none"
           filter="url(#filter19)" id="rect19" width="94.049995" height="3.8700001" x="59.399998" y="291.06" />
-          <path fill="#334155aa" stroke="#ffffff" strokeWidth={0.722759}strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 48.77993,292.96441 H 198.37219 L 177.07638,271.66858 V 31.330004 L 154.82442,9.0780421 H 10.186687 V 86.872982 l 17.471265,17.471278 v 167.75893 z" id="path1" />
+          <path fill="#334155aa" stroke="#ffffff" strokeWidth={0.722759}strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 48.77993,292.96441 H 198.37219 L 177.07638,271.66858 V 31.330004 L 154.82442,9.0780421 H 10.186687 V 86.872982 l 17.471265,17.471278 v 167.75893 z" id="path1"/>
           <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="m 116.14425,2.6458334 h 42.07011 l 15.559,15.5589936" id="path2" />
           <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,36.371466 199.1545,52.27814" id="path3" />
           <path fill="none" stroke="#ffffff" strokeWidth={0.722759} strokeLinecap="round" strokeLinejoin="round" strokeDasharray="none" strokeOpacity={1} d="M 183.24782,44.194421 199.1545,60.101096" id="path4" />
