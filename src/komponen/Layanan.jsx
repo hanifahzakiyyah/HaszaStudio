@@ -17,8 +17,12 @@ export default function Layanan() {
     Promise.all([
       fetch("/ilustrasi.json").then((res) => res.json()),
       fetch("/ilustrasi2.json").then((res) => res.json()),
-    ]).then(([data1, data2]) => {
-      setAnimations([data1, data2, data1, data2, data1]);
+      fetch("/kubus.json").then((res) => res.json()),
+      fetch("/motion.json").then((res) => res.json()),
+      fetch("/kotak.json").then((res) => res.json()),
+
+    ]).then(([data1, data2, data3, data4, data5]) => {
+      setAnimations([data3, data5, data4, data2, data1]);
     });
   }, []);
   
