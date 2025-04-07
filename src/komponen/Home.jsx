@@ -6,6 +6,10 @@ import Layanan from './Layanan.jsx';
 import Keunggulan from './Keunggulan.jsx';
 import About from './About.jsx';
 import Footer from './Footer.jsx';
+import BukuTamu from './BukuTamu.jsx';
+
+import ClippyAssistant from '../ClippyAssistant.jsx';
+
 
 const Bg = lazy(() => import('./Bg.jsx'));
 
@@ -27,7 +31,9 @@ export default function Home(){
         <Layanan/>
         <Keunggulan/>
         <About/>
+        <BukuTamu />
         <Footer/>
+        <ClippyAssistant scrollEnabled={scrollEnabled}/>
     </>
     )
 }

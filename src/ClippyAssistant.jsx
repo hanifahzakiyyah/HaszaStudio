@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import clippy from 'clippyjs';
 
-function ClippyAssistant() {
+function ClippyAssistant(scrollEnabled) {
   const [clippyAgent, setClippyAgent] = useState(null);
   const isLoaded = useRef(false);
   const clippyContainerRef = useRef();
@@ -58,7 +58,7 @@ function ClippyAssistant() {
   return (
     <div
       ref={clippyContainerRef}
-      className="fixed z-50 top-5 left-[50vw] -translate-x-1/4 lg:left-[35vw] lg:top-[50vh] w-[200px] h-[200px]"
+      className={"fixed lg:absolute z-50 top-5 left-[50vw] -translate-x-1/4 lg:left-[35vw] lg:top-[50vh] w-[200px] h-[200px]"}
     >
       {/* Clippy akan muncul di dalam sini */}
     </div>
