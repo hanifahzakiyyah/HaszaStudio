@@ -8,13 +8,13 @@ export default function Footer() {
                 <div>
                     <h2 className="text-2xl font-bold">HZS-Studio</h2>
                     <div className="flex gap-4 mt-2">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://www.facebook.com/hanifahzakiyyahs" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
                             <Facebook size={24} className="hover:text-blue-500 transition" />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://www.instagram.com/hzs_studio/" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
                             <Instagram size={24} className="hover:text-pink-500 transition" />
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://github.com/hanifahzakiyyah" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
                             <Github size={24} className="hover:text-gray-400 transition" />
                         </a>
                         <a href="https://wa.me/6282231259145" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">

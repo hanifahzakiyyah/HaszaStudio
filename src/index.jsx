@@ -1,40 +1,29 @@
 import './style.css';
 import ReactDOM from 'react-dom/client';
-import { StrictMode, Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { StrictMode, Suspense, lazy, useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Blog from './blog/Blog.jsx';
+import BlogDetail from './blog/BlogDetail.jsx';
+// import clippy from 'clippyjs';
+import ClippyAssistant from './ClippyAssistant.jsx';
 
 // Lazy load komponen agar tidak langsung dimuat semua di awal
-const Bg = lazy(() => import('./komponen/Bg.jsx'));
 const Home = lazy(() => import('./komponen/Home.jsx'));
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 const isDev = process.env.NODE_ENV === "development";
 
 function App() {
-    // const location = useLocation();
+    
 
-    // useEffect(() => {
-    //     const rootEl = document.querySelector("#root");
-    //     if (location.pathname === "/3d") {
-    //         rootEl.style.position = "fixed";
-    //         rootEl.style.top = "0";
-    //         rootEl.style.left = "0";
-    //         rootEl.style.width = "100vw";
-    //         rootEl.style.height = "100vh";
-    //     } else {
-    //         rootEl.style.position = "";
-    //         rootEl.style.top = "";
-    //         rootEl.style.left = "";
-    //         rootEl.style.width = "";
-    //         rootEl.style.height = "";
-    //     }
-    // }, [location.pathname]);
 
     return (
-        <Suspense fallback={<div className="loading flex justify-center items-center h-[100vh] w-[100vw]">Loading...</div>}>
-            <Bg />
+        <Suspense fallback={<div className="loading flex justify-center items-center h-[100vh] w-[100vw] text-center">Tunggu sebentar yaaa <br /> lagi loading...</div>}>
+            <ClippyAssistant />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogDetail />} />
             </Routes>
         </Suspense>
     );
@@ -42,7 +31,16 @@ function App() {
 
 root.render(
     <>
-        {isDev ? <StrictMode><BrowserRouter future={{ v7_startTransition: true }}><App /></BrowserRouter></StrictMode> : <BrowserRouter future={{ v7_startTransition: true }}><App /></BrowserRouter>}
-    
+        {isDev ? (
+            <StrictMode>
+                <BrowserRouter future={{ v7_startTransition: true }}>
+                    <App />
+                </BrowserRouter>
+            </StrictMode>
+        ) : (
+            <BrowserRouter future={{ v7_startTransition: true }}>
+                <App />
+            </BrowserRouter>
+        )}
     </>
 );
