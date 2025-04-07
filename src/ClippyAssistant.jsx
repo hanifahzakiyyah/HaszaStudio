@@ -2,49 +2,67 @@ import { useEffect, useRef, useState } from 'react';
 import clippy from 'clippyjs';
 
 function ClippyAssistant() {
-    const [clippyAgent, setClippyAgent] = useState(null);
-    const isLoaded = useRef(false); // Mencegah double render
+  const [clippyAgent, setClippyAgent] = useState(null);
+  const isLoaded = useRef(false);
+  const clippyContainerRef = useRef();
 
-    useEffect(() => {
-        if (isLoaded.current) return; // Jika sudah dimuat, jangan jalankan lagi
-        isLoaded.current = true;
+  // Fungsi bantu untuk hitung scale
+  const getScaleValue = () => (window.innerWidth >= 1024 ? 2 : 1);
 
-        window.CLIPPY_CDN = "/clippy/agents/";
+  useEffect(() => {
+    if (isLoaded.current) return;
+    isLoaded.current = true;
 
-        clippy.load("Bonzi", (agent) => {
-            setClippyAgent(agent);
-            agent.show();
+    window.CLIPPY_CDN = "/clippy/agents/";
 
-            // Set posisi awal & perbesar Clippy
-            agent._el.css({
-                position: "absolute",
-                left: "50px",  // Posisi awal
-                top: "50px",
-                zIndex: "9999",
-                pointerEvents: "none",
-                transform: "scale(1.5)", // 🔥 Perbesar 1.5x
-                transformOrigin: "bottom right" // 🔥 Pastikan skala dari sudut kanan bawah
-            });
+    clippy.load("Clippy", (agent) => {
+      setClippyAgent(agent);
+      agent.show();
 
-            // Event: Saat Clippy di-hover
-            agent._el.on("mouseenter", () => {
-                agent.play("Hide"); 
-            });
+      const clippyElement = agent._el.get(0);
+      
 
-            // Event: Saat Clippy di-klik
-            agent._el.on("click", () => {
-                agent.play("LookDownReturn"); // Animasi menunjuk
-            });
+      if (clippyContainerRef.current) {
+        clippyContainerRef.current.appendChild(clippyElement);
+      }
+
+      const scaleValue = getScaleValue();
+      const isDesktop = getScaleValue() === 2;
+
+      agent._el.css({
+        pointerEvents: "auto",
+        transform: `scale(${scaleValue})`,
+        cursor: "grab"
+      });
+
+      agent._el.on("mouseenter", () => {
+        // agent.speak("tekan tombol 'Get Started' dan pilih halaman yang mau kamu tuju")
+        agent.play(isDesktop? "GestureRight" : "GestureDown")
+      })
+    });
+
+    // 🔥 Listener resize untuk update scale
+    const handleResize = () => {
+      if (clippyAgent) {
+        const newScale = getScaleValue();
+        clippyAgent._el.css({
+          transform: `scale(${newScale})`
         });
+      }
+    };
 
-        return () => {
-            if (clippyAgent) {
-                clippyAgent.hide();
-            }
-        };
-    }, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [clippyAgent]);
 
-    return null; // Tidak perlu return elemen karena Clippy muncul sendiri
+  return (
+    <div
+      ref={clippyContainerRef}
+      className="fixed z-50 top-5 left-[50vw] -translate-x-1/4 lg:left-[35vw] lg:top-[50vh] w-[200px] h-[200px]"
+    >
+      {/* Clippy akan muncul di dalam sini */}
+    </div>
+  );
 }
 
 export default ClippyAssistant;
