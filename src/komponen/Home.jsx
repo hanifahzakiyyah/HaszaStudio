@@ -8,7 +8,7 @@ import About from './About.jsx';
 import Footer from './Footer.jsx';
 import BukuTamu from './BukuTamu.jsx';
 
-import ClippyAssistant from '../ClippyAssistant.jsx';
+// import ClippyAssistant from '../ClippyAssistant.jsx';
 
 
 const Bg = lazy(() => import('./Bg.jsx'));
@@ -17,6 +17,11 @@ const Bg = lazy(() => import('./Bg.jsx'));
 export default function Home(){
 
     const [scrollEnabled, setScrollEnabled] = useState(false);
+    const [bahasa, setBahasa] = useState("ind");
+
+    const handleBahasaChange = (newBahasa) => {
+      setBahasa(newBahasa);
+    };
 
     useEffect(() => {
       document.body.style.overflow = scrollEnabled ? "auto" : "hidden";
@@ -26,14 +31,14 @@ export default function Home(){
     return (<>
         {scrollEnabled && <Navbar />}
         <Bg />
-        <Hero setScrollEnabled={setScrollEnabled}/>
-        <Porto />
-        <Layanan/>
-        <Keunggulan/>
-        <About/>
-        <BukuTamu />
-        <Footer/>
-        <ClippyAssistant scrollEnabled={scrollEnabled}/>
+        <Hero setScrollEnabled={setScrollEnabled} onBahasaChange={handleBahasaChange}/>
+        <Porto bahasa={bahasa}/>
+        <Layanan bahasa={bahasa}/>
+        <Keunggulan bahasa={bahasa}/>
+        <About bahasa={bahasa}/>
+        <BukuTamu bahasa={bahasa}/>
+        <Footer bahasa={bahasa}/>
+        {/* <ClippyAssistant scrollEnabled={scrollEnabled}/> */}
     </>
     )
 }

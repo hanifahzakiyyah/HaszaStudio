@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function Hero({ setScrollEnabled }){
+export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [showButtons, setShowButtons] = useState(false);
+    const bahasa = useRef("ind")
+
+    useEffect(() => {
+        onBahasaChange(bahasa.current);
+    }, []);
 
     const enableScrollAndScrollToSection = (sec) => {
         setScrollEnabled(true);
@@ -11,13 +16,21 @@ export default function Hero({ setScrollEnabled }){
         }, 100);
     };
 
+    const handleClick = (pilihan) => {
+        onBahasaChange(pilihan); 
+    };
+
     return (
-        <section id="hero" className="container relative mx-auto h-screen overflow-hidden lg:pt-16">
+        <section id="hero" className="container relative mx-auto h-screen overflow-hidden">
             
             
             <div 
-                className="w-full lg:w-1/2 ml-0 lg:ml-[10vw] text-gray-300 my-[10%] lg:my-[20vh] text-center lg:text-left py-[9vh] lg:py-[5vh] font-monos"
+                className="w-full lg:w-1/2 ml-0 lg:ml-[10vw] text-gray-300 my-[10%] lg:my-[20vh] text-center lg:text-left py-[9vh] font-monos"
             >
+                <div className="bahasa flex w-32 justify-evenly cursor-pointer">
+                    <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("ind")}>ind</div>
+                    <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("eng")}>eng</div>
+                </div>
                 <motion.h1 
                     className="text-2xl lg:text-3xl lg:mb-5" 
                     style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
@@ -25,7 +38,7 @@ export default function Hero({ setScrollEnabled }){
                     whileTap={{}}
                     initial={{}}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >Buat Website 3D dan<br />Animasi Interaktif memukau <br /> bersama <br /> 
+                >{bahasa.current == "ind" ? `Buat Website 3D dan<br />Animasi Interaktif memukau <br /> bersama <br />` : `Build Stunning 3D Websites<br />and Interactive Animations <br /> with <br />`} 
                     <motion.span
                         className="text-5xl lg:text-6xl block my-5 mb-7"
                         whileHover={{ scale: 1.1, originX:0 }}
