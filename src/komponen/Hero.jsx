@@ -1,22 +1,16 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import Rive from "@rive-app/react-canvas";
-=======
 import { useEffect, useRef, useState } from "react";
->>>>>>> f0ca19ea959caf55d913ffe2d5944e1cbe4d5843
 
 export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [showButtons, setShowButtons] = useState(false);
-<<<<<<< HEAD
     const [active, seActive] = useState(false)
-=======
     const bahasa = useRef("ind")
 
     useEffect(() => {
         onBahasaChange(bahasa.current);
     }, []);
->>>>>>> f0ca19ea959caf55d913ffe2d5944e1cbe4d5843
 
     const enableScrollAndScrollToSection = (sec) => {
         setScrollEnabled(true);
