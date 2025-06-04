@@ -125,12 +125,12 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
 
             </div>
 
-            <div className="border absolute top-[30vh] lg:top-[5vh] right-0 lg:-right-52 scale-100 lg:scale-90 w-full lg:w-[75vw] h-[90vh]">
+            {/* <div className="border absolute top-[30vh] lg:top-[5vh] right-0 lg:-right-52 scale-100 lg:scale-90 w-full lg:w-[75vw] h-[90vh]">
                     <Rive src="/daun.riv" />
-            </div>
+            </div> */}
 
 
-            {/* <div className="absolute top-[30vh] lg:top-[5vh] right-0 lg:-right-52 scale-100 lg:scale-90 w-full lg:w-[75vw] h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
+            <div className="absolute top-[30vh] lg:top-[5vh] right-0 lg:-right-52 scale-100 lg:scale-90 w-full lg:w-[75vw] h-[90vh] bg-center bg-cover lg:bg-auto backdrop-blur-sm"
                 style={{
                     backgroundImage: "url('/hero.webp')",
                     maskImage: "radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 63%)",
@@ -144,7 +144,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                     fetchpriority="high"
                     className="hidden"
                 />
-            </div> */}
+            </div>
 
 
             

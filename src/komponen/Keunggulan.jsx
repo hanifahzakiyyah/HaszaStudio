@@ -4,32 +4,44 @@ import { useState } from "react";
 
 const advantages = [
   {
-    title: "Berkualitas",
-    description: "Setiap detail model dan animasi dikerjakan dengan presisi tinggi untuk hasil yang memukau."
+    titleInd: "Berkualitas",
+    titleEng: 'High Quality',
+    descriptionInd: "Setiap detail model dan animasi dikerjakan dengan presisi tinggi untuk hasil yang memukau.",
+    descriptionEng: "Every detail of the model and animation is crafted with high precision for stunning results."
   },
   {
-    title: "Pelayanan Responsif",
-    description: "Kami siap mendengarkan kebutuhan Anda dan memberikan solusi terbaik dengan komunikasi yang cepat."
+    titleInd: "Pelayanan Responsif",
+    titleEng: 'Rensponsive Service',
+    descriptionInd: "Kami siap mendengarkan kebutuhan Anda dan memberikan solusi terbaik dengan komunikasi yang cepat.",
+    descriptionEng: "We are ready to listen to your needs and provide the best solutions with fast communication."
   },
   {
-    title: "Ramah SEO",
-    description: "Untuk kebutuhan Website, struktur HTML, gambar, link dan lain-lainnya sudah mendukung SEO."
+    titleInd: "Ramah SEO",
+    titleEng: 'SEO Friendly',
+    descriptionInd: "Untuk kebutuhan Website, struktur HTML, gambar, link dan lain-lainnya sudah mendukung SEO.",
+    descriptionEng: "For website needs, the HTML structure, images, links, and other elements are all SEO-friendly."
   },
   {
-    title: "Kustom Sesuai Kebutuhan",
-    description: "Layanan kami fleksibel dan dapat disesuaikan dengan kebutuhan spesifik proyek Anda."
+    titleInd: "Kustom Sesuai Kebutuhan",
+    titleEng: 'Customized to Your Needs',
+    descriptionInd: "Layanan kami fleksibel dan dapat disesuaikan dengan kebutuhan spesifik proyek Anda.",
+    descriptionEng: "Our services are flexible and can be tailored to the specific needs of your project."
   },
   {
-    title: "Teknologi Terkini",
-    description: "Kami menggunakan software dan teknik terbaru untuk memastikan hasil yang modern dan kompetitif."
+    titleInd: "Teknologi Terkini",
+    titleEng: 'Newest Technology',
+    descriptionInd: "Kami menggunakan software dan teknik terbaru untuk memastikan hasil yang modern dan kompetitif.",
+    descriptionEng: "We use the latest software and techniques to ensure modern and competitive results."
   },
   {
-    title: "Ramah Revisi",
-    description: "Terbuka untuk revisi kalau pekerjaan kami belum sesuai dengan brief."
+    titleInd: "Ramah Revisi",
+    titleEng: 'Revision Friendly',
+    descriptionInd: "Terbuka untuk revisi kalau pekerjaan kami belum sesuai dengan brief.",
+    descriptionEng: "Open to revisions if our work does not yet align with the brief."
   }
 ];
 
-export default function Keunggulan() {
+export default function Keunggulan({bahasa}) {
 
   const [expanded, setExpanded] = useState(Array(advantages.length).fill(false));
 
@@ -53,7 +65,7 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          K E U N G G U L A N
+          {bahasa=='ind'? 'K E U N G G U L A N' : 'A D V A N T A G E S'}
         </motion.p>
         <motion.h2
           className="text-white text-2xl lg:text-4xl font-bold mb-6"
@@ -61,7 +73,7 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Mengapa Memilih HZS Studio?
+          {bahasa=='ind' ? 'Mengapa Memilih HZS Studio?' : 'Why HZS Studio?'}
         </motion.h2>
         <motion.p
           className="font-monos text-white text-sm -mt-5 mb-10"
@@ -69,13 +81,13 @@ export default function Keunggulan() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          tap panah untuk membuka atau{" "}
+          {bahasa=='ind' ? 'tap panah untuk membuka atau ' : 'tap the arrow to open or '}
           <motion.span className="cursor-pointer underline relative z-10" 
             onClick={bukaSemua}
             initial={{scale:1, rotate:0}}
             whileHover={{scale:1.5, rotate:30}}
           >
-            buka semua
+            {bahasa=='ind' ? 'buka semua' : 'open all'}
           </motion.span>
         </motion.p>
 
@@ -109,10 +121,10 @@ export default function Keunggulan() {
               </AnimatePresence>
               <div className="pl-6">
                 <h3 className="text-white text-lg text-left font-semibold mb-2">
-                    {advantages[i].title}
+                    {bahasa=='ind' ? advantages[i].titleInd : advantages[i]. titleEng}
                 </h3>
                 <p className="text-gray-400 text-sm text-left">
-                    {advantages[i].description}
+                    {bahasa=='ind' ? advantages[i].descriptionInd : advantages[i]. descriptionEng}
                 </p>
 
                 {/* Sudut Kanan Atas */}

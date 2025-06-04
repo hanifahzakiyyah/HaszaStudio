@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Popup from "./Popup";
 import { Link } from "lucide-react";
 
-export default function Porto() {
+export default function Porto({bahasa}) {
     const [selectedFilter, setSelectedFilter] = useState("");
     const [displayedPorto, setDisplayedPorto] = useState(portof);
     const [isFiltering, setIsFiltering] = useState(false);
@@ -58,7 +58,7 @@ export default function Porto() {
                 whileTap={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-                Karya Terbaru Kami
+                {bahasa == 'ind' ? 'Karya Terbaru Kami' : 'Our Newest Work'}
             </motion.h2>
 
             {/* Filter Buttons */}

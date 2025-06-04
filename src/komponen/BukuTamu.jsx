@@ -9,7 +9,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 
-export default function BukuTamu() {
+export default function BukuTamu({bahasa}) {
   const [nama, setNama] = useState("");
   const [pesan, setPesan] = useState("");
   const [daftarPesan, setDaftarPesan] = useState([]);
@@ -63,29 +63,56 @@ export default function BukuTamu() {
   return (
     <section className="py-8 px-4 lg:py-20 lg:px-8 max-w-7xl m-auto font-monos flex justify-center flex-col lg:flex-row border border-slate-500 backdrop-blur-sm rounded-3xl mt-14 mx-5 lg:mx-auto" id="chat">
       {/* Form input doa */}
-      <form onSubmit={handleSubmit} className="lg:max-w-[40vw] mx-4 p-4 border border-slate-600 text-slate-300 rounded-lg shadow-lg bg-slate-700/50 backdrop-blur-sm">
+      {bahasa === 'ind' ? (
+        <form onSubmit={handleSubmit} className="lg:max-w-[40vw] mx-4 p-4 border border-slate-600 text-slate-300 rounded-lg shadow-lg bg-slate-700/50 backdrop-blur-sm">
           <h2 className="text-xl font-semibold mb-4">Tulis Pesan</h2>
           <input
-              type="text"
-              placeholder="Nama..."
-              value={nama}
-              onChange={(e) => setNama(e.target.value)}
-              className="border p-2 w-full bg-slate-300/10 border-slate-500 rounded"
+            type="text"
+            placeholder="Nama..."
+            value={nama}
+            onChange={(e) => setNama(e.target.value)}
+            className="border p-2 w-full bg-slate-300/10 border-slate-500 rounded"
           />
           <textarea
-              placeholder="Tulis pesan..."
-              value={pesan}
-              onChange={(e) => setPesan(e.target.value)}
-              className="border p-2 w-full rounded bg-slate-300/10 border-slate-500 mt-2"
+            placeholder="Tulis pesan..."
+            value={pesan}
+            onChange={(e) => setPesan(e.target.value)}
+            className="border p-2 w-full rounded bg-slate-300/10 border-slate-500 mt-2"
           ></textarea>
-          <button 
-              type="submit" 
-              disabled={loading} 
-              className="w-full p-2 bg-slate-300/50 text-slate-100 border rounded disabled:bg-gray-400"
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full p-2 bg-slate-300/50 text-slate-100 border rounded disabled:bg-gray-400"
           >
-              {loading ? "Mengirim..." : "Kirim"}
+            {loading ? "Mengirim..." : "Kirim"}
           </button>
-      </form>
+        </form>
+      ) : (
+        <form onSubmit={handleSubmit} className="lg:max-w-[40vw] mx-4 p-4 border border-slate-600 text-slate-300 rounded-lg shadow-lg bg-slate-700/50 backdrop-blur-sm">
+          <h2 className="text-xl font-semibold mb-4">Write a Message</h2>
+          <input
+            type="text"
+            placeholder="Name..."
+            value={nama}
+            onChange={(e) => setNama(e.target.value)}
+            className="border p-2 w-full bg-slate-300/10 border-slate-500 rounded"
+          />
+          <textarea
+            placeholder="Write your message..."
+            value={pesan}
+            onChange={(e) => setPesan(e.target.value)}
+            className="border p-2 w-full rounded bg-slate-300/10 border-slate-500 mt-2"
+          ></textarea>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full p-2 bg-slate-300/50 text-slate-100 border rounded disabled:bg-gray-400"
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
+      )}
+
 
       <div className="mt-6 lg:mt-0 max-h-[50vh] min-w-[40vw] mx-4 overflow-y-scroll">
         {/* List doa yang sudah dikirim */}
