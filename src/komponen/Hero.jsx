@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Rive from "@rive-app/react-canvas";
-import { useEffect, useRef, useState } from "react";
 
 export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [showButtons, setShowButtons] = useState(false);
     const [active, seActive] = useState(false)
-    const bahasa = useRef("ind")
+    const [bahasa, setBahasa] = useState("ind");
 
     useEffect(() => {
-        onBahasaChange(bahasa.current);
-    }, []);
+        onBahasaChange(bahasa);
+    }, [bahasa]);
+
 
     const enableScrollAndScrollToSection = (sec) => {
         setScrollEnabled(true);
@@ -20,7 +20,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
     };
 
     const handleClick = (pilihan) => {
-        onBahasaChange(pilihan); 
+        setBahasa(pilihan); 
     };
 
     return (
@@ -34,22 +34,32 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                     <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("ind")}>ind</div>
                     <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("eng")}>eng</div>
                 </div>
-                <motion.h1 
-                    className="text-2xl lg:text-3xl lg:mb-5" 
-                    style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)'}}
-                    whileHover={{}}
-                    whileTap={{}}
-                    initial={{}}
+                <motion.h1
+                    className="text-2xl lg:text-3xl lg:mb-5"
+                    style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)' }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                >{bahasa.current == "ind" ? `Buat Website 3D dan<br />Animasi Interaktif memukau <br /> bersama <br />` : `Build Stunning 3D Websites<br />and Interactive Animations <br /> with <br />`} 
+                >
+                    {bahasa === "ind" ? (
+                        <>
+                            Buat Website 3D dan<br />
+                            Animasi Interaktif memukau<br />
+                            bersama<br />
+                        </>
+                    ) : (
+                        <>
+                            Build Stunning 3D Websites<br />
+                            and Interactive Animations<br />
+                            with<br />
+                        </>
+                    )}
                     <motion.span
                         className="text-5xl lg:text-6xl block my-5 mb-7"
-                        whileHover={{ scale: 1.1, originX:0 }}
-                        whileTap={{ scale: 1.1, originX:0 }}
-                        initial={{}}
+                        whileHover={{ scale: 1.1, originX: 0 }}
+                        whileTap={{ scale: 1.1, originX: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     >
-                        HZS Studio</motion.span>
+                        HZS Studio
+                    </motion.span>
                 </motion.h1>
                 
                 <div className="flex flex-col items-center lg:items-start">
@@ -60,7 +70,9 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                         // transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         onClick={setShowButtons}
                     >
-                        <span className="z-10">Mulai Sekarang!</span>
+                        <span className="z-10">
+                            {bahasa === "ind" ? ( <>Mulai Sekarang!</>) : ( <>Get Started!</>)}
+                        </span>
                     </motion.button>
         
                     {showButtons && (
@@ -74,7 +86,9 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                                 onClick={()=>enableScrollAndScrollToSection("porto")}
                             >
-                                <span className="z-10">Lihat Portfolio</span>
+                                <span className="z-10">
+                                    {bahasa === "ind" ? ('Lihat Portfolio') : ('Show Portfolio')}
+                                </span>
                             </motion.button>
         
                             <motion.button
@@ -86,7 +100,9 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                                 transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
                                 onClick={()=>enableScrollAndScrollToSection("layanan")}
                             >
-                                <span className="z-10">Layanan & Produk</span>
+                                <span className="z-10">
+                                    {bahasa === "ind" ? ('Layanan & Produk'):('Services & Products')}
+                                </span>
                             </motion.button>
                             
                             <motion.button
@@ -98,7 +114,9 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                                 transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
                                 onClick={()=>enableScrollAndScrollToSection("about")}
                             >
-                                <span className="z-10">Tentang Kami</span>
+                                <span className="z-10">
+                                    {bahasa === "ind" ? ('Tentang Kami'):('About Us')}
+                                </span>
                             </motion.button>
                         </div>
                     )}
@@ -108,7 +126,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
             </div>
 
             <div className="border absolute top-[30vh] lg:top-[5vh] right-0 lg:-right-52 scale-100 lg:scale-90 w-full lg:w-[75vw] h-[90vh]">
-                    <Rive src="/daun.riv" autoplay active={active}/>
+                    <Rive src="/daun.riv" />
             </div>
 
 
