@@ -1,30 +1,29 @@
-# HZS Studio - Showcase Interaktif 3D
+# HZS Studio - 3D Interactive Showcase
 
-Selamat datang di repository proyek **HZS Studio**! 🚀
+Welcome to the **HZS Studio** project repository! 🚀
 
-Proyek ini merupakan website showcase interaktif, di mana pengguna dapat berinteraksi dengan konten yang ada didalam website. Website ini dibangun dengan teknologi modern untuk memberikan pengalaman eksplorasi produk yang lebih menarik.
+This project is an interactive showcase website where users can engage with the content within the site. It is built using modern technologies to provide a more engaging product exploration experience.
 
-## 🔗 Akses Website
+## 🔗 Website Access
 
-Kamu bisa langsung mengakses website ini di:
+You can access the website directly at:  
 👉 [https://hzs-studio.com](https://hzs-studio.com)
 
 ## 🖼️ Preview
 
-Berikut tampilan dari proyek ini:
+Here’s a look at the project:  
 ![Preview](https://hzs-studio.vercel.app/skrinsut.png)
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
-- **React.js** - Library JavaScript untuk membangun UI interaktif.
-- **Tailwind CSS** - Untuk styling yang cepat dan responsif.
-- **Framer Motion** - Animasi transisi.
+- **React.js** - A JavaScript library for building interactive UIs.  
+- **Tailwind CSS** - For fast and responsive styling.  
+- **Framer Motion** - For transition animations.
 
-## 📞 Kontak
+## 📞 Contact
 
-Jika ada pertanyaan atau ingin bekerja sama, silakan hubungi:
-📧 Email: hanifahzakiyyah@gmail.com
+If you have any questions or are interested in collaboration, feel free to reach out:  
+📧 Email: hanifahzakiyyah@gmail.com  
 🌐 Website: [https://hzs-studio.com](https://hzs-studio.com)
 
-Terima kasih telah mengunjungi repository ini! Semoga bermanfaat! 😊🎨🚀
-
+Thank you for visiting this repository! Hope you find it useful! 😊🎨🚀
