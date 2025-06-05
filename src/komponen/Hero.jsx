@@ -8,6 +8,15 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [bahasa, setBahasa] = useState("ind");
 
     useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const bahasaFromUrl = params.get("lang");
+        if (bahasaFromUrl && (bahasaFromUrl === "ind" || bahasaFromUrl === "eng")) {
+            setBahasa(bahasaFromUrl);
+            if (onBahasaChange) onBahasaChange(bahasaFromUrl);
+        }
+    }, []);
+
+    useEffect(() => {
         onBahasaChange(bahasa);
     }, [bahasa]);
 
