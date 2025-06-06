@@ -65,12 +65,13 @@ export default function Porto({bahasa}) {
             <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto h-9 flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">
                 {["All", "Website", "Furniture", "Icon", "App", "Animations"].map((category) => (
                     category === "Animations" ? (
-                        <button 
-                            // key={category}
-                            className="bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-3 py-1 rounded-full m-0 lg:m-3 transition-all duration-300 hover:bg-slate-600 hover:text-white"
-                        >
-                            <a href="/animations"> Animations </a>
-                        </button>
+                        <a
+                            href="/animations"
+                            className="inline-block bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-4 py-3 rounded-full m-1 lg:m-3 transition-all duration-300 hover:bg-slate-600 hover:text-white"
+                            >
+                            Animations
+                        </a>
+
                     ) : (
                     <button
                         key={category}
