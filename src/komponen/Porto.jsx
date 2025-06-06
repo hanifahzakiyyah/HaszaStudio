@@ -2,8 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import portof from "../data";
 import { useState, useEffect } from "react";
 import Popup from "./Popup";
+import { Link } from "lucide-react";
 
-export default function Porto() {
+export default function Porto({bahasa}) {
     const [selectedFilter, setSelectedFilter] = useState("");
     const [displayedPorto, setDisplayedPorto] = useState(portof);
     const [isFiltering, setIsFiltering] = useState(false);
@@ -57,12 +58,20 @@ export default function Porto() {
                 whileTap={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-                Karya Terbaru Kami
+                {bahasa == 'ind' ? 'Karya Terbaru Kami' : 'Our Newest Work'}
             </motion.h2>
 
             {/* Filter Buttons */}
             <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto h-9 flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">
-                {["All", "Website", "Furniture", "Icon", "App"].map((category) => (
+                {["All", "Website", "Furniture", "Icon", "App", "Animations"].map((category) => (
+                    category === "Animations" ? (
+                        <button 
+                            // key={category}
+                            className="bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-3 py-1 rounded-full m-0 lg:m-3 transition-all duration-300 hover:bg-slate-600 hover:text-white"
+                        >
+                            <a href="/animations"> Animations </a>
+                        </button>
+                    ) : (
                     <button
                         key={category}
                         onClick={() => handleFilterChange(category)}
@@ -74,6 +83,7 @@ export default function Porto() {
                     >
                         {category}
                     </button>
+                    )
                 ))}
             </div>
 

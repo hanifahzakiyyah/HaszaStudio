@@ -29,7 +29,7 @@ export default function Home(){
 
 
     return (<>
-        {scrollEnabled && <Navbar />}
+        {scrollEnabled && <Navbar bahasa={bahasa}/>}
         <Bg />
         <Hero setScrollEnabled={setScrollEnabled} onBahasaChange={handleBahasaChange}/>
         <Porto bahasa={bahasa}/>

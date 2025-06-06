@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import '../style.css'
 
-export default function Navbar() {
+export default function Navbar({bahasa}) {
     const navigation = [
-        { name: "Beranda", href: "#hero" },
-        { name: "Lihat Portfolio", href: "#porto" },
-        { name: "Layanan & Produk", href: "#layanan" },
-        { name: "Tentang Kami", href: "#about" },
+        { nameEng: 'Home', nameInd: "Beranda", href: "#hero" },
+        { nameEng: 'Show Portfolio', nameInd: "Lihat Portfolio", href: "#porto" },
+        { nameEng: 'Services & Products', nameInd: "Layanan & Produk", href: "#layanan" },
+        { nameEng: 'About Us', nameInd: "Tentang Kami", href: "#about" },
     ];
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,7 +37,7 @@ export default function Navbar() {
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <motion.a
-                  key={item.name}
+                  key={item.nameInd}
                   href={item.href}
                   className="text-cyan-200 px-3 py-2 rounded-md text-sm font-medium"
                   style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)', }}
@@ -45,7 +45,7 @@ export default function Navbar() {
                   whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
                   transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 >
-                  {item.name}
+                  {bahasa== 'ind' ? item.nameInd : item.nameEng}
                 </motion.a>
               ))}
             </div>
@@ -95,7 +95,7 @@ export default function Navbar() {
         >
             {navigation.map((item) => (
             <motion.a
-                key={item.name}
+                key={item.nameInd}
                 href={item.href}
                 className="block text-cyan-200 px-3 py-2 rounded-md text-base font-medium"
                 style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)'}}
@@ -104,7 +104,7 @@ export default function Navbar() {
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 onClick={()=>setIsOpen(false)}
             >
-                {item.name}
+                 {bahasa== 'ind' ? item.nameInd : item.nameEng}
             </motion.a>
             ))}
         </motion.div>

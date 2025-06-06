@@ -15,6 +15,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "@rive-app/react-canvas": "^4.21.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "clippyjs": "^0.0.3",
     "firebase": "^11.5.0",

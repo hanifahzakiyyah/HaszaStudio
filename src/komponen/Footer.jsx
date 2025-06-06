@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Github, Phone } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({bahasa}) {
     return (
         <footer className="bg-slate-700/50 backdrop-blur-sm p-10 mt-32 font-monos text-white">
             <div className="flex flex-col lg:flex-row justify-center gap-6">
@@ -25,9 +25,9 @@ export default function Footer() {
 
                 {/* Contact Section */}
                 <div>
-                    <h2 className="text-xl font-semibold">Hubungi Kami</h2>
+                    <h2 className="text-xl font-semibold">{bahasa=='ind' ? 'Hubungi Kami' : 'Contact Us'}</h2>
                     <p>Yogyakarta, Indonesia</p>
-                    <p>Telepon / WA: <a href="https://wa.me/6282231259145" className="text-blue-300 hover:underline">082231259145</a></p>
+                    <p>Whatsapp: <a href="https://wa.me/6282231259145" className="text-blue-300 hover:underline">082231259145</a></p>
                     <p>Email: <a href="mailto:hanifahzakiyyatus@gmail.com" className="text-blue-300 hover:underline">hanifahzakiyyatus@gmail.com</a></p>
                 </div>
             </div>

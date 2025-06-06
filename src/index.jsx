@@ -4,6 +4,7 @@ import { StrictMode, Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Blog from './blog/Blog.jsx';
 import BlogDetail from './blog/BlogDetail.jsx';
+import Animations from './komponen/Animations.jsx';
 
 // Lazy load komponen agar tidak langsung dimuat semua di awal
 const Home = lazy(() => import('./komponen/Home.jsx'));
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogDetail />} />
+                <Route path="/animations" element={<Animations />}/>
             </Routes>
         </Suspense>
     );
