@@ -19,6 +19,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
     const handleClick = (pilihan) => {
         onBahasaChange(pilihan); 
     };
+    // test
 
     return (
         <section id="hero" className="container relative mx-auto h-screen overflow-hidden">
