@@ -40,6 +40,7 @@ export default function Bg() {
                 onClick={() => setIsAnimating(!isAnimating)}
                 onMouseEnter={() => setShowTooltip("animasi")}
                 onMouseLeave={() => setShowTooltip(null)}
+                aria-label="Toggle Background Animation"
                 className="fixed z-10 bottom-24 right-4 bg-slate-700/10 backdrop-blur-sm border border-white text-white p-3 rounded shadow-lg hover:bg-gray-700 transition"
             >
                 <div className="relative w-full h-full flex items-center justify-center">
@@ -57,6 +58,7 @@ export default function Bg() {
                 onClick={scrollToTop}
                 onMouseEnter={() => setShowTooltip("scroll")}
                 onMouseLeave={() => setShowTooltip(null)}
+                aria-label="Scroll to top"
                 className="fixed z-10 bottom-4 right-4 bg-slate-700/10 backdrop-blur-sm border border-white text-white p-3 rounded shadow-lg hover:bg-gray-700 transition"
             >
                 <div className="relative w-full h-full flex items-center justify-center">

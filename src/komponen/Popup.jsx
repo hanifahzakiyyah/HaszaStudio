@@ -79,12 +79,12 @@ export default function Popup({aidi, benarMuncul, onClose }){
                 animate={{ scale: 1, y: 0, transition: { type: "spring", stiffness: 150, damping: 10 } }} 
                 exit={{ scale: 0, y: -290, transition: { duration: 0.3, ease: "easeOut" } }} 
             > 
-                <motion.button
+                <button
                     className="absolute top-4 right-4 lg:-top-4 lg:-right-4 scale-150 border border-slate-400 rounded-full bg-slate-700/80 shadow-md px-3 py-1"
                     onClick={handleClose}
                 >
                     ✖
-                </motion.button>
+                </button>
 
                 <div className="lg:basis-[40%] lg:max-w-[45%] flex overflow-hidden relative">
                     {(portof[aidi].files) ? (
