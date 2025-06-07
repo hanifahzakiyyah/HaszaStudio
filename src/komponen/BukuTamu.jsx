@@ -115,21 +115,23 @@ export default function BukuTamu({bahasa}) {
 
 
       <div className="mt-6 lg:mt-0 max-h-[50vh] min-w-[40vw] mx-4 overflow-y-scroll">
-        {/* List doa yang sudah dikirim */}
-        {daftarPesan.map((item) => (<>
-            <div key={item.id} className="flex items-start gap-3 p-1 pt-3 rounded-3xl backdrop-blur-sm mb-3">
-                {/* Kotak inisial nama */}
-                <div className="w-10 h-10 flex items-center justify-center bg-slate-300/50 backdrop-blur-sm text-slate-100 font-bold rounded-md flex-shrink-0">
-                    {item.nama.charAt(0).toUpperCase()}
-                </div>
-                <div className="flex-1 ">
-                    <p className="text-slate-100">{item.nama}</p>
-                    <p className="text-slate-300">{item.pesan}</p>
-                    <p className="text-sm text-slate-500">{formatTanggal(item.createdAt)}</p>
-                </div>
-            </div><hr /></>
+        {daftarPesan.map((item) => (
+        <div key={item.id}>
+          <div className="flex items-start gap-3 p-1 pt-3 rounded-3xl backdrop-blur-sm mb-3">
+            {/* Kotak inisial nama */}
+            <div className="w-10 h-10 flex items-center justify-center bg-slate-300/50 backdrop-blur-sm text-slate-100 font-bold rounded-md flex-shrink-0">
+              {item.nama.charAt(0).toUpperCase()}
+            </div>
+            <div className="flex-1">
+              <p className="text-slate-100">{item.nama}</p>
+              <p className="text-slate-300">{item.pesan}</p>
+              <p className="text-sm text-slate-500">{formatTanggal(item.createdAt)}</p>
+            </div>
+          </div>
+          <hr />
+        </div>
         ))}
-    </div>
+      </div>
     </section>
   );
 
