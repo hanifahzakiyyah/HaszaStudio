@@ -62,12 +62,13 @@ export default function Porto({bahasa}) {
             </motion.h2>
 
             {/* Filter Buttons */}
-            <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto h-9 flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">
+            <div className="max-w-[90vw] lg:max-w-[60vw] mx-auto flex justify-center flex-wrap gap-2 lg:gap-1 mt-3 lg:mt-0 text-[0.8rem] lg:text-lg">
                 {["All", "Website", "Furniture", "Icon", "App", "Animations"].map((category) => (
                     category === "Animations" ? (
                         <a
                             href="/animations"
                             className="inline-block bg-slate-400/10 backdrop-blur-sm border border-slate-400 px-4 py-3 rounded-full m-1 lg:m-3 transition-all duration-300 hover:bg-slate-600 hover:text-white"
+                            key={category}
                             >
                             Animations
                         </a>
@@ -93,7 +94,7 @@ export default function Porto({bahasa}) {
                 <AnimatePresence mode="sync">
                     {!isFiltering && displayedPorto.map((porto, i) => (
                         <motion.div
-                            key={porto.judul}
+                            key={`${porto.judul}-${i}`}
                             className="group text-center border border-gray-400 p-0 rounded-sm overflow-hidden relative w-fit max-[376px]:w-[80vw]"
                             initial={{ opacity: 0.5, scale: 0.8, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}

@@ -4,10 +4,11 @@ import '../style.css'
 
 export default function Navbar({bahasa}) {
     const navigation = [
-        { nameEng: 'Home', nameInd: "Beranda", href: "#hero" },
-        { nameEng: 'Show Portfolio', nameInd: "Lihat Portfolio", href: "#porto" },
-        { nameEng: 'Services & Products', nameInd: "Layanan & Produk", href: "#layanan" },
-        { nameEng: 'About Us', nameInd: "Tentang Kami", href: "#about" },
+        { nameEng: 'Home', nameInd: "Beranda", href: "/#hero" },
+        { nameEng: '3D Portfolio', nameInd: "3D Portfolio", href: "/#porto" },
+        { nameEng: 'Animation Portfolio', nameInd: "Portfolio Animasi", href: "/animations" },
+        { nameEng: 'Services & Products', nameInd: "Layanan & Produk", href: "/#layanan" },
+        { nameEng: 'About Us', nameInd: "Tentang Kami", href: "/#about" },
     ];
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +31,7 @@ export default function Navbar({bahasa}) {
               whileTap={{ scale: 1.1, filter: 'drop-shadow(2px 2px 10px #aaaaff)' }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              HZS Studio
+              <a href="/"> HZS Studio </a>
             </motion.h1>
           </div>
           <div className="hidden sm:block">
