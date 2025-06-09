@@ -15,7 +15,6 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "@rive-app/react-canvas": "^4.21.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "clippyjs": "^0.0.3",
     "firebase": "^11.5.0",
@@ -25,6 +24,7 @@
     "react": "18.2",
     "react-dom": "18.2",
     "react-router-dom": "^6.29.0",
+    "rive-react": "^4.21.3",
     "swiper": "^11.2.2"
   }
 }

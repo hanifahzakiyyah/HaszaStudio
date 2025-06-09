@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
+// import { useRive, useStateMachineInput, useRiveEvent } from "@rive-app/react-canvas";
+import { useRive, useRiveEvent, useStateMachineInput } from "rive-react";
+
 
 export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [showButtons, setShowButtons] = useState(false);
@@ -13,6 +15,8 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         artboard: "Artboard",
         autoplay: true,
     })
+
+    
 
     // if (rive){
     //     console.log(rive.contents)
@@ -48,7 +52,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         <section id="hero" className="container relative w-scree h-screen overflow-hidden flex items-center justify-center flex-col lg:flex-row">
             
             
-            <div className="w-full h-1/2 lg:w-1/2 lg:h-full -mt-4 -mb-16 lg:-mt-[200px] text-gray-300 text-center lg:text-left font-monos flex items-center justify-center"
+            <div className="w-full h-1/2 lg:w-1/2 lg:h-full -mt-4 -mb-16 lg:-mt-[150px] text-gray-300 text-center font-monos flex items-center justify-center "
             >
                 <div>
                     {/* <div className="bahasa flex w-32 justify-evenly cursor-pointer">
@@ -83,7 +87,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                         </motion.span>
                     </motion.h1>
                     
-                    <div className="relative flex flex-col items-center lg:items-start">
+                    <div className="relative flex flex-col items-center">
                         <motion.button
                             className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-sm lg:text-xl"
                             whileHover={{ scaleX: 1.5, originX:0}}
@@ -146,8 +150,8 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
 
             </div>
 
-            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-start" >
-                <div className="w-[400px] h-[200px] lg:w-[800px] lg:h-[400px] mx-auto">
+            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-center lg:justify-start mt-0 lg:-mt-28 ml-0" >
+                <div className="w-[300px] h-[200px] lg:w-[600px] lg:h-[400px]">
                     <RiveComponent />
                 </div>
             </div>
