@@ -9,8 +9,14 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
 
     const {rive, RiveComponent} = useRive({
         src: "bahasa.riv",
-        stateMachines: "State Machine 1"
+        stateMachines: "State Machine 1",
+        artboard: "Artboard",
+        autoplay: true,
     })
+
+    // if (rive){
+    //     console.log(rive.contents)
+    // }
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -42,7 +48,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         <section id="hero" className="container relative w-scree h-screen overflow-hidden flex items-center justify-center flex-col lg:flex-row">
             
             
-            <div className="w-full h-1/2 lg:w-1/2 lg:h-full mt-0 lg:-mt-[200px] text-gray-300 text-center lg:text-left font-monos flex items-center justify-center"
+            <div className="w-full h-1/2 lg:w-1/2 lg:h-full -mt-4 -mb-16 lg:-mt-[200px] text-gray-300 text-center lg:text-left font-monos flex items-center justify-center"
             >
                 <div>
                     {/* <div className="bahasa flex w-32 justify-evenly cursor-pointer">
@@ -50,7 +56,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                         <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("eng")}>eng</div>
                     </div> */}
                     <motion.h1
-                        className="text-2xl lg:text-3xl lg:mb-5"
+                        className="text-md lg:text-3xl lg:mb-5"
                         style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)' }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     >
@@ -68,7 +74,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                             </>
                         )}
                         <motion.span
-                            className="text-5xl lg:text-6xl block my-5 mb-7"
+                            className="text-2xl lg:text-6xl block lg:my-5 my-0 lg:mb-7 mb-0"
                             whileHover={{ scale: 1.1, originX: 0 }}
                             whileTap={{ scale: 1.1, originX: 0 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
@@ -79,11 +85,11 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                     
                     <div className="relative flex flex-col items-center lg:items-start">
                         <motion.button
-                            className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-base lg:text-xl"
+                            className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-sm lg:text-xl"
                             whileHover={{ scaleX: 1.5, originX:0}}
                             whileTap={{ scaleX: 1.5, originX:0 }}
                             // transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                            onClick={setShowButtons}
+                            onClick={()=>setShowButtons(!showButtons)}
                         >
                             <span className="z-10">
                                 {bahasa === "ind" ? ( <>Mulai Sekarang!</>) : ( <>Get Started!</>)}
@@ -93,7 +99,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                         {showButtons && (
                             <div className="absolute top-[60px] flex flex-col items-start gap-1 ml-10">
                                 <motion.button
-                                    className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
+                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
                                     whileHover={{ scaleX: 1.3, originX:0 }}
                                     whileTap={{ scaleX: 1.3, originX:0 }}
                                     initial={{ opacity: 0, y: -20}}
@@ -107,7 +113,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                                 </motion.button>
             
                                 <motion.button
-                                    className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
+                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
                                     whileHover={{ scaleX: 1.5, originX:0 }}
                                     whileTap={{ scaleX: 1.5, originX:0 }}
                                     initial={{ opacity: 0, y: -20}}
@@ -121,7 +127,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                                 </motion.button>
                                 
                                 <motion.button
-                                    className="z-10 py-3 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-base lg:text-xl"
+                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
                                     whileHover={{ scaleX: 1.5, originX:0 }}
                                     whileTap={{ scaleX: 1.5, originX:0 }}
                                     initial={{ opacity: 0, y: -20}}
@@ -140,8 +146,10 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
 
             </div>
 
-            <div className="bg-blue-500/20 w-full h-1/2 lg:w-1/2 lg:h-full border" >
-
+            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-start" >
+                <div className="w-[400px] h-[200px] lg:w-[800px] lg:h-[400px] mx-auto">
+                    <RiveComponent />
+                </div>
             </div>
 
 
