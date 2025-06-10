@@ -4,12 +4,12 @@ import Navbar from "./Navbar"
 import { motion } from "framer-motion";
 
 const videos = [
-  { title: "Abstract Design", year: "2025", thumbnail: "./porto/elektro.webp", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-  { title: "Robot", year: "2022", thumbnail: "./porto/jasats.webp", video: "https://www.w3schools.com/html/movie.mp4" },
-  { title: "Futuristic Interface", year: "2025", thumbnail: "./porto/dirgahayu.webp", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-  { title: "3D Character", year: "2021", thumbnail: "./porto/camping.webp", video: "https://www.w3schools.com/html/movie.mp4" },
-  { title: "City Skyline", year: "2025", thumbnail: "./porto/gameDash.webp", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-  { title: "Geometric Animation", year: "2023", thumbnail: "./porto/kosmetik.webp", video: "https://www.w3schools.com/html/movie.mp4" },
+  { title: "Stylized Growing Flower", year: "2024", thumbnail: "./video/bungaa.webp", video: "./video/bunga.mp4" },
+  { title: "Cloth Simulaltion", year: "2024", thumbnail: "./video/gelembungg.webp", video: "./video/gelembung.mp4" },
+  { title: "Eid Congrats Video", year: "2023", thumbnail: "./video/idul-fitrii.webp", video: "./video/idul-fitri.mp4" },
+  { title: "Cubes Motion", year: "2023", thumbnail: "./video/kotakgelombangg.webp", video: "./video/kotakgelombang.mp4" },
+  { title: "Brick Motion", year: "2025", thumbnail: "./video/kotakkeatass.webp", video: "./video/kotakkeatas.mp4" },
+  { title: "Geometric Animation", year: "2023", thumbnail: "./video/ngerubungg.webp", video: "./video/ngerubung.mp4" },
 ];
 
 export default function Animations({bahasa}) {
@@ -72,7 +72,7 @@ export default function Animations({bahasa}) {
                     >
                         ✖
                     </button>
-                    <video controls autoPlay className="w-full rounded-lg">
+                    <video controls controlsList="nodownload" autoPlay className="w-full rounded-lg">
                         <source src={selected.video} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
