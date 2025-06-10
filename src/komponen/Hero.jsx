@@ -22,14 +22,10 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         const handleStateChange = (event) => {
             const stateName = event.data;
 
-            // console.log('State change event:', stateName, "diluar if");
-
             if (stateName.includes("indToEng")) {
-                console.log('State change event:', event.data, "if pertama");
                 handleClick("eng");
             }
             if (stateName.includes("engToInd")) {
-                console.log('State change event:', event.data, "if kedua");
                 handleClick("ind");
             }
         };
