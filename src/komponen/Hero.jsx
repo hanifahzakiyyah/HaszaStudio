@@ -16,7 +16,32 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         autoplay: true,
     })
 
-    
+   useEffect(() => {
+        if (!rive) return;
+
+        const handleStateChange = (event) => {
+            const stateName = event.data;
+
+            // console.log('State change event:', stateName, "diluar if");
+
+            if (stateName.includes("indToEng")) {
+                console.log('State change event:', event.data, "if pertama");
+                handleClick("eng");
+            }
+            if (stateName.includes("engToInd")) {
+                console.log('State change event:', event.data, "if kedua");
+                handleClick("ind");
+            }
+        };
+
+        rive.on('statechange', handleStateChange);
+
+        return () => {
+            rive.off('statechange', handleStateChange);
+        };
+    }, [rive]);
+
+
 
     // if (rive){
     //     console.log(rive.contents)
@@ -31,9 +56,9 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         }
     }, []);
 
-    useEffect(() => {
-        onBahasaChange(bahasa);
-    }, [bahasa]);
+    // useEffect(() => {
+    //     onBahasaChange(bahasa);
+    // }, [bahasa]);
 
 
     const enableScrollAndScrollToSection = (sec) => {
@@ -44,8 +69,10 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
     };
 
     const handleClick = (pilihan) => {
-        setBahasa(pilihan); 
+        setBahasa(pilihan);
+        if (onBahasaChange) onBahasaChange(pilihan);
     };
+
     // test
 
     return (
@@ -55,10 +82,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
             <div className="w-full h-1/2 lg:w-1/2 lg:h-full -mt-4 -mb-16 lg:-mt-[150px] text-gray-300 text-center font-monos flex items-center justify-center "
             >
                 <div>
-                    {/* <div className="bahasa flex w-32 justify-evenly cursor-pointer">
-                        <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("ind")}>ind</div>
-                        <div className="bg-none hover:bg-slate-600 p-6" onClick={() => handleClick("eng")}>eng</div>
-                    </div> */}
+                    
                     <motion.h1
                         className="text-md lg:text-3xl lg:mb-5"
                         style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)' }}
