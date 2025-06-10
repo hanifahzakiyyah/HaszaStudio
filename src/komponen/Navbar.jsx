@@ -55,6 +55,7 @@ export default function Navbar({bahasa}) {
           <button
             className="sm:hidden text-cyan-200 hover:text-shadow focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Buka menu navigasi" 
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ filter: 'drop-shadow(0px 0px 8px #ffffffdd)'}}>
               {/* Garis atas */}
