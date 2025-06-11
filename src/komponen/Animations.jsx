@@ -4,17 +4,17 @@ import Navbar from "./Navbar"
 import { motion } from "framer-motion";
 
 const videos = [
+  { title: "Excavator", year: "2022", thumbnail: "./video/eska.webp", video: "./video/eska.mp4" },
+  { title: "Falling Bird Story", year: "2025", thumbnail: "./video/burung.webp", video: "./video/burung.mp4" },
+  { title: "Astronout and the Moon", year: "2023", thumbnail: "./video/bulan.webp", video: "./video/bulan.mp4" },
+  { title: "Robot Arm", year: "2024", thumbnail: "./video/robot.webp", video: "./video/robot.mp4" },
+  { title: "Bitcoins Logo", year: "2025", thumbnail: "./video/logo.webp", video: "./video/logo.mp4" },
   { title: "Stylized Growing Flower", year: "2024", thumbnail: "./video/bungaa.webp", video: "./video/bunga.mp4" },
   { title: "Cloth Simulaltion", year: "2024", thumbnail: "./video/gelembung.webp", video: "./video/gelembung.mp4" },
   { title: "Eid Congrats Video", year: "2023", thumbnail: "./video/idul-fitri.webp", video: "./video/idul-fitri.mp4" },
   { title: "Cubes Motion", year: "2023", thumbnail: "./video/kotakgelombang.webp", video: "./video/kotakgelombang.mp4" },
   { title: "Brick Motion", year: "2025", thumbnail: "./video/kotakkeatass.webp", video: "./video/kotakkeatas.mp4" },
   { title: "Just For Fun", year: "2023", thumbnail: "./video/ngerubungg.webp", video: "./video/ngerubung.mp4" },
-  { title: "Excavator", year: "2022", thumbnail: "./video/eska.webp", video: "./video/eska.mp4" },
-  { title: "Falling Bird Story", year: "2025", thumbnail: "./video/burung.webp", video: "./video/burung.mp4" },
-  { title: "Astronout and the Moon", year: "2023", thumbnail: "./video/bulan.webp", video: "./video/bulan.mp4" },
-  { title: "Robot Arm", year: "2024", thumbnail: "./video/robot.webp", video: "./video/robot.mp4" },
-  { title: "Bitcoins Logo", year: "2025", thumbnail: "./video/logo.webp", video: "./video/logo.mp4" },
 ];
 
 export default function Animations({bahasa}) {
