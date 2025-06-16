@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react";
-import { PauseCircle, PlayCircle, ArrowUp } from "lucide-react";
+import { useState } from "react";
+import { ArrowUp } from "lucide-react";
+import { useRive } from "rive-react";
+
 
 export default function Bg() {
-    const [isAnimating, setIsAnimating] = useState(true);
-    const [showTooltip, setShowTooltip] = useState(null); // null = tidak ada tooltip
+    const [showTooltip, setShowTooltip] = useState(null);
 
-    useEffect(() => {
-        document.body.style.backgroundImage = `url("/bg.webp")`;
-
-        if (isAnimating) {
-            document.body.style.animation = "bg-scrolling 5s linear infinite";
-        } else {
-            document.body.style.animation = "none";
-        }
-
-        return () => {
-            document.body.style.animation = "";
-        };
-    }, [isAnimating]);
+    const {rive: riveBg, RiveComponent:RiveBg} = useRive({
+        src: "bg.riv",
+        stateMachines: "State Machine 1",
+        artboard: "Artboard",
+        autoplay: true,
+    })
 
     // Fungsi untuk scroll ke atas
     const scrollToTop = () => {
@@ -25,33 +19,12 @@ export default function Bg() {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-slate-900 absolute">
-            {/* Tailwind Inline Animation */}
-            <style>
-                {`
-                @keyframes bg-scrolling {
-                    100% { background-position: 50px 50px; }
-                }
-                `}
-            </style>
-
-            {/* Tombol Stop/Mulai Animasi */}
-            <button 
-                onClick={() => setIsAnimating(!isAnimating)}
-                onMouseEnter={() => setShowTooltip("animasi")}
-                onMouseLeave={() => setShowTooltip(null)}
-                aria-label="Toggle Background Animation"
-                className="fixed z-10 lg:bottom-24 bottom-16 right-4 bg-slate-700/10 backdrop-blur-sm border border-white text-white lg:p-3 p-1 rounded shadow-lg hover:bg-gray-700 transition"
-            >
-                <div className="relative w-full h-full flex items-center justify-center">
-                    {isAnimating ? <PauseCircle size={24} /> : <PlayCircle size={24} />}
-                    {showTooltip === "animasi" && (
-                        <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded transition">
-                            {isAnimating ? "Stop animasi background" : "Mulai animasi background"}
-                        </span>
+        <div className="w-screen h-screen bg-slate-900 absolute">
+            <div className="fixed w-[100vh] h-[100vh] z-[0] lg:h-[100vw] lg:w-[100vw]">
+                 {RiveBg && (
+                    <RiveBg/>
                     )}
-                </div>
-            </button>
+            </div>
 
             {/* Tombol Scroll ke Atas */}
             <button 

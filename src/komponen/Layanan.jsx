@@ -69,7 +69,7 @@ export default function Layanan({bahasa}) {
 
   return (
     <>
-      <section id="layanan" className="relative shadow-lg rounded-3xl lg:border lg:border-slate-100/10">
+      <section id="layanan" className="relative shadow-lg rounded-3xl lg:border lg:border-slate-100/10 pointer-events-none">
         <AnimatedSVG />
         <div className="absolute z-10 left-0 right-0 top-0 bottom-0 m-auto aspect-[210/297] w-[70%] lg:aspect-[297/210] lg:mt-[36vw] lg:w-[50%]">
         

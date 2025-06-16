@@ -20,7 +20,7 @@ const AnimatedSVG = () => {
       <svg
         viewBox="0 0 210 297"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full select-none "
+        className="w-full h-full select-none pointer-events-auto"
       >
         <defs>
           <filter id="blur">

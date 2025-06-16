@@ -57,8 +57,8 @@ export default function Keunggulan({bahasa}) {
     
 
   return (
-    <section id="keunggulan" className="py-16 rounded-3xl shadow-xl lg:-mt-64 font-monos">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="keunggulan" className="py-16 rounded-3xl shadow-xl lg:-mt-64 font-monos pointer-events-none">
+      <div className="max-w-6xl mx-auto px-6 text-center relative z-10 pointer-events-auto">
         <motion.p
           className="font-monos text-white text-sm"
           initial={{ opacity: 0, y: -30 }}
@@ -68,7 +68,7 @@ export default function Keunggulan({bahasa}) {
           {bahasa=='ind'? 'K E U N G G U L A N' : 'A D V A N T A G E S'}
         </motion.p>
         <motion.h2
-          className="text-white text-2xl lg:text-4xl font-bold mb-6"
+          className="text-white text-2xl lg:text-4xl font-bold mb-6 pointer-events-auto"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -76,13 +76,13 @@ export default function Keunggulan({bahasa}) {
           {bahasa=='ind' ? 'Mengapa Memilih HZS Studio?' : 'Why HZS Studio?'}
         </motion.h2>
         <motion.p
-          className="font-monos text-white text-sm -mt-5 mb-10"
+          className="font-monos text-white text-sm -mt-5 mb-10 pointer-events-auto"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {bahasa=='ind' ? 'tap panah untuk membuka atau ' : 'tap the arrow to open or '}
-          <motion.span className="cursor-pointer underline relative z-10" 
+          <motion.span className="cursor-pointer underline relative z-20" 
             onClick={bukaSemua}
             initial={{scale:1, rotate:0}}
             whileHover={{scale:1.5, rotate:30}}
@@ -95,7 +95,7 @@ export default function Keunggulan({bahasa}) {
 
           {advantages.map((adv, i)=>(
             <motion.div
-                className="relative cursor-pointer bg-slate-200/10 backdrop-blur-sm p-6 shadow-lg overflow-hidden m-auto group"
+                className="relative cursor-pointer bg-slate-200/10 backdrop-blur-sm p-6 shadow-lg overflow-hidden m-auto group pointer-events-auto"
                 animate={{ maxWidth: expanded[i] ? "100%" : "90px", maxHeight: expanded[i] ? "100%" : "80px" }}
                 onClick={() => toggleExpand(i)}
                 transition={{ duration: 0.3, ease: "backOut" }}
