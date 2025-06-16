@@ -9,15 +9,21 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
     const [active, seActive] = useState(false)
     const [bahasa, setBahasa] = useState("ind");
 
-    const {rive, RiveComponent} = useRive({
+    const {rive: riveBahasa, RiveComponent:RiveBahasa} = useRive({
         src: "bahasa.riv",
         stateMachines: "State Machine 1",
         artboard: "Artboard",
         autoplay: true,
     })
+    const {rive: riveNgetik, RiveComponent:RiveNgetik} = useRive({
+        src: "ngetik.riv",
+        stateMachines: "SM",
+        artboard: "53",
+        autoplay: true,
+    })
 
    useEffect(() => {
-        if (!rive) return;
+        if (!riveBahasa) return;
 
         const handleStateChange = (event) => {
             const stateName = event.data;
@@ -30,18 +36,12 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
             }
         };
 
-        rive.on('statechange', handleStateChange);
+        riveBahasa.on('statechange', handleStateChange);
 
         return () => {
-            rive.off('statechange', handleStateChange);
+            riveBahasa.off('statechange', handleStateChange);
         };
-    }, [rive]);
-
-
-
-    // if (rive){
-    //     console.log(rive.contents)
-    // }
+    }, [riveBahasa]);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -75,7 +75,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
         <section id="hero" className="container relative w-scree h-screen overflow-hidden flex items-center justify-center flex-col lg:flex-row">
             
             
-            <div className="w-full h-1/2 lg:w-1/2 lg:h-full -mt-4 -mb-16 lg:-mt-[150px] text-gray-300 text-center font-monos flex items-center justify-center "
+            <div className="w-full h-1/2 lg:w-1/2 lg:h-full mt-24 -mb-32 lg:-mb-16 lg:mt-6 text-gray-300 text-center font-monos flex items-center justify-center "
             >
                 <div>
                     
@@ -107,72 +107,31 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                         </motion.span>
                     </motion.h1>
                     
-                    <div className="relative flex flex-col items-center">
-                        <motion.button
-                            className="z-10 py-3 px-5 my-1 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-sm lg:text-xl"
-                            whileHover={{ scaleX: 1.5, originX:0}}
-                            whileTap={{ scaleX: 1.5, originX:0 }}
-                            // transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                            onClick={()=>setShowButtons(!showButtons)}
-                        >
-                            <span className="z-10">
-                                {bahasa === "ind" ? ( <>Mulai Sekarang!</>) : ( <>Get Started!</>)}
-                            </span>
-                        </motion.button>
+                    <motion.button
+                        className="z-10 py-3 px-5 my-1 mb-8 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-sm lg:text-xl"
+                        whileHover={{ scaleX: 1.5, originX:0}}
+                        whileTap={{ scaleX: 1.5, originX:0 }}
+                        // transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                        onClick={()=>enableScrollAndScrollToSection("porto")}
+                    >
+                        <span className="z-10">
+                            {bahasa === "ind" ? ( <>Mulai Sekarang!</>) : ( <>Get Started!</>)}
+                        </span>
+                    </motion.button>
+
+                    <hr className="invisible lg:visible"/>
+
+                    <div className="w-[400px] h-[200px] scale-90 lg:w-[800px] lg:h-[400px] -mt-8">
+                        <RiveBahasa />
+                    </div>
             
-                        {showButtons && (
-                            <div className="absolute top-[60px] flex flex-col items-start gap-1 ml-10">
-                                <motion.button
-                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
-                                    whileHover={{ scaleX: 1.3, originX:0 }}
-                                    whileTap={{ scaleX: 1.3, originX:0 }}
-                                    initial={{ opacity: 0, y: -20}}
-                                    animate={{ opacity: 1, y: 0}}
-                                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                                    onClick={()=>enableScrollAndScrollToSection("porto")}
-                                >
-                                    <span className="z-10">
-                                        {bahasa === "ind" ? ('Lihat Portfolio') : ('Show Portfolio')}
-                                    </span>
-                                </motion.button>
-            
-                                <motion.button
-                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
-                                    whileHover={{ scaleX: 1.5, originX:0 }}
-                                    whileTap={{ scaleX: 1.5, originX:0 }}
-                                    initial={{ opacity: 0, y: -20}}
-                                    animate={{ opacity: 1, y: 0}}
-                                    transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
-                                    onClick={()=>enableScrollAndScrollToSection("layanan")}
-                                >
-                                    <span className="z-10">
-                                        {bahasa === "ind" ? ('Layanan & Produk'):('Services & Products')}
-                                    </span>
-                                </motion.button>
-                                
-                                <motion.button
-                                    className="z-10 lg:py-3 py-1 px-5 rounded-sm border-l-4 border-slate-400 shadow-2xl text-sm lg:text-xl"
-                                    whileHover={{ scaleX: 1.5, originX:0 }}
-                                    whileTap={{ scaleX: 1.5, originX:0 }}
-                                    initial={{ opacity: 0, y: -20}}
-                                    animate={{ opacity: 1, y: 0}}
-                                    transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.2 }}
-                                    onClick={()=>enableScrollAndScrollToSection("about")}
-                                >
-                                    <span className="z-10">
-                                        {bahasa === "ind" ? ('Tentang Kami'):('About Us')}
-                                    </span>
-                                </motion.button>
-                            </div>
-                        )}
-                    </div> 
                 </div>
 
             </div>
 
-            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-center lg:justify-start mt-0 lg:-mt-28 ml-0" >
-                <div className="w-[300px] h-[200px] lg:w-[600px] lg:h-[400px]">
-                    <RiveComponent />
+            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-center mt-32 lg:mt-32 lg:justify-start ml-0" >
+                <div className="w-[400px] h-[250px] lg:w-[850px] lg:h-[800px]">
+                    <RiveNgetik />
                 </div>
             </div>
 
