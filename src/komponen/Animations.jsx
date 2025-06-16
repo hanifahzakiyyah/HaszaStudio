@@ -25,9 +25,9 @@ export default function Animations({bahasa}) {
         <Navbar />
         <Bg/>
         <div className="pt-20">
-            <div className="text-white lg:m-10 m-3 lg:p-10 p-5 lg:border-4 border-2 border-slate-300 rounded-2xl font-monos backdrop-blur-sm">
+            <div className="text-white lg:m-10 m-3 lg:p-10 p-5 lg:border-4 border-2 border-slate-300 rounded-2xl font-monos backdrop-blur-sm pointer-events-none">
                 <motion.h1
-                    className="text-2xl lg:text-3xl lg:mb-5 text-center mb-3"
+                    className="text-2xl lg:text-3xl lg:mb-5 text-center mb-3 pointer-events-auto"
                     style={{ filter: 'drop-shadow(0px 0px 15px #ffffff88)' }}
                     whileHover={{ scaleY: 1.3, originX: 0 }}
                     whileTap={{ scaleY: 1.3, originX: 0 }}
@@ -42,7 +42,7 @@ export default function Animations({bahasa}) {
                     {videos.map((vid, index) => (
                         <div
                             key={index}
-                            className="relative group cursor-pointer h-80 overflow-hidden"
+                            className="relative group cursor-pointer h-80 overflow-hidden pointer-events-auto"
                             onClick={() => setSelected(vid)}
                         >
                         
@@ -68,7 +68,7 @@ export default function Animations({bahasa}) {
         </div>
 
         {selected && (
-            <div className="bg-slate-700/10 backdrop-blur-sm fixed z-40 top-0 bottom-0 left-0 right-0 lg:bottom- flex flex-col lg:flex-row justify-center items-center gap-5 lg:px-20 pt-10 lg:pt-0">
+            <div className="bg-slate-700/10 backdrop-blur-sm fixed z-40 top-0 bottom-0 left-0 right-0 lg:bottom- flex flex-col lg:flex-row justify-center items-center gap-5 lg:px-20 pt-10 lg:pt-0 pointer-events-auto">
                 <div className=" rounded-lg h-[80%] w-[80%] relative">
                     
                     <button
