@@ -7,12 +7,12 @@ This project is an interactive showcase website where users can engage with the 
 ## 🔗 Website Access
 
 You can access the website directly at:  
-👉 [https://hzs-studio.com](https://hzs-studio.com)
+👉 [https://hzs-studio.com](https://haszastudio.vercel.app)
 
 ## 🖼️ Preview
 
 Here’s a look at the project:  
-![Preview](https://hzs-studio.vercel.app/skrinsut.png)
+![Preview](https://haszastudio.vercel.app/skrinsut.png)
 
 ## 🛠️ Technologies Used
 
@@ -24,6 +24,6 @@ Here’s a look at the project:
 
 If you have any questions or are interested in collaboration, feel free to reach out:  
 📧 Email: hanifahzakiyyah@gmail.com  
-🌐 Website: [https://hzs-studio.com](https://hzs-studio.com)
+🌐 Website: [https://hzs-studio.com](https://haszastudio.vercel.app)
 
 Thank you for visiting this repository! Hope you find it useful! 😊🎨🚀
