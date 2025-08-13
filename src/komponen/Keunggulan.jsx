@@ -73,7 +73,7 @@ export default function Keunggulan({bahasa}) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {bahasa=='ind' ? 'Mengapa Memilih HZS Studio?' : 'Why HZS Studio?'}
+          {bahasa=='ind' ? 'Mengapa Memilih Hasza Studio?' : 'Why Hasza Studio?'}
         </motion.h2>
         <motion.p
           className="font-monos text-white text-sm -mt-5 mb-10 pointer-events-auto"
@@ -160,13 +160,6 @@ export default function Keunggulan({bahasa}) {
           ))}
           
           
-
-
-
-
-
-
-        
 
         </div>
       </div>

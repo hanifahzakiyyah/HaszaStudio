@@ -6,18 +6,18 @@ export default function Footer({bahasa}) {
             <div className="flex flex-col lg:flex-row justify-center gap-6">
                 {/* Brand Section */}
                 <div>
-                    <h2 className="text-2xl font-bold">HZS-Studio</h2>
+                    <h2 className="text-2xl font-bold">Hasza-Studio</h2>
                     <div className="flex gap-4 mt-2">
-                        <a href="https://www.facebook.com/hanifahzakiyyahs" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://www.facebook.com/hanifahzakiyyahs" target="_blank" rel="noopener noreferrer" aria-label="link social media Hasza-studio">
                             <Facebook size={24} className="hover:text-blue-500 transition" />
                         </a>
-                        <a href="https://www.instagram.com/hzs_studio/" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://www.instagram.com/hanifahzakiyyah/" target="_blank" rel="noopener noreferrer" aria-label="link social media Hasza-studio">
                             <Instagram size={24} className="hover:text-pink-500 transition" />
                         </a>
-                        <a href="https://github.com/hanifahzakiyyah" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://github.com/hanifahzakiyyah" target="_blank" rel="noopener noreferrer" aria-label="link social media Hasza-studio">
                             <Github size={24} className="hover:text-gray-400 transition" />
                         </a>
-                        <a href="https://wa.me/6282231259145" target="_blank" rel="noopener noreferrer" aria-label="link social media hzs-studio">
+                        <a href="https://wa.me/6282231259145" target="_blank" rel="noopener noreferrer" aria-label="link social media Hasza-studio">
                             <Phone size={24} className="hover:text-green-500 transition" />
                         </a>
                     </div>

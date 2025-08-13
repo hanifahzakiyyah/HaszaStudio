@@ -78,36 +78,36 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
                     >
                         {bahasa === "ind" ? (
                             <>
-                                Buat Website 3D dan<br />
-                                Animasi Interaktif memukau<br />
+                                Buat Website yang Interaktif<br />
+                                dan Keperluan 3D<br />
                                 bersama<br />
                             </>
                         ) : (
                             <>
-                                Build Stunning 3D Websites<br />
-                                and Interactive Animations<br />
+                                Build Interactive Website<br />
+                                and 3D needs<br />
                                 with<br />
                             </>
                         )}
                         <motion.span
                             className="text-2xl lg:text-6xl block lg:my-5 my-0 lg:mb-7 mb-0"
-                            whileHover={{ scale: 1.1, originX: 0 }}
-                            whileTap={{ scale: 1.1, originX: 0 }}
+                            whileHover={{ scale: 1.1, originX: 0.5 }}
+                            whileTap={{ scale: 1.1, originX: 0.5 }}
                             transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         >
-                            HZS Studio
+                            Hasza Studio
                         </motion.span>
                     </motion.h1>
                     
                     <motion.button
                         className="z-10 py-3 px-5 my-1 mb-8 backdrop-blur-sm rounded-sm border-l-8 border-r border-t border-b border-slate-400 shadow-2xl text-sm lg:text-xl pointer-events-auto"
-                        whileHover={{ scaleX: 1.5, originX:0}}
-                        whileTap={{ scaleX: 1.5, originX:0 }}
+                        whileHover={{ scaleX: 1.1, originX:0.5}}
+                        whileTap={{ scaleX: 1.1, originX:0.5 }}
                         // transition={{ type: "spring", stiffness: 300, damping: 10 }}
                         onClick={()=>enableScrollAndScrollToSection("porto")}
                     >
                         <span className="z-10">
-                            {bahasa === "ind" ? ( <>Mulai Sekarang!</>) : ( <>Get Started!</>)}
+                            {bahasa === "ind" ? ( <>Masuk dan lihat</>) : ( <>Get Started!</>)}
                         </span>
                     </motion.button>
 
