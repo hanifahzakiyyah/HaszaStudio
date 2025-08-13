@@ -1,4 +1,4 @@
-# HZS Studio - 3D Interactive Showcase
+# Hasza Studio - 3D Interactive Showcase
 
 Welcome to the **HZS Studio** project repository! 🚀
 
