@@ -1,6 +1,6 @@
-import { Facebook, Instagram, Github, Phone } from "lucide-react";
+import { Facebook, Instagram, Github, Phone, MapPin } from "lucide-react";
 
-export default function Footer({bahasa}) {
+export default function Footer({ bahasa }) {
     return (
         <footer className="bg-slate-700/50 backdrop-blur-sm p-10 mt-32 font-monos text-white">
             <div className="flex flex-col lg:flex-row justify-center gap-6">
@@ -20,13 +20,16 @@ export default function Footer({bahasa}) {
                         <a href="https://wa.me/6282231259145" target="_blank" rel="noopener noreferrer" aria-label="link social media Hasza-studio">
                             <Phone size={24} className="hover:text-green-500 transition" />
                         </a>
+                        <a href="https://maps.app.goo.gl/aNpwwmxAdA44m7KQ7" target="_blank" rel="noopener noreferrer" aria-label="link map haszastudio" >
+                            <MapPin size={24} className="hover:text-red-500 transition"/> 
+                        </a>
                     </div>
                 </div>
 
                 {/* Contact Section */}
                 <div>
-                    <h2 className="text-xl font-semibold">{bahasa=='ind' ? 'Hubungi Kami' : 'Contact Us'}</h2>
-                    <p>Yogyakarta, Indonesia</p>
+                    <h2 className="text-xl font-semibold">{bahasa === 'ind' ? 'Hubungi Kami' : 'Contact Us'}</h2>
+                    <p> <a href="https://maps.app.goo.gl/aNpwwmxAdA44m7KQ7" className="text-blue-300 hover:underline">Yogyakarta, Indonesia </a> </p>
                     <p>Whatsapp: <a href="https://wa.me/6282231259145" className="text-blue-300 hover:underline">082231259145</a></p>
                     <p>Email: <a href="mailto:hanifahzakiyyatus@gmail.com" className="text-blue-300 hover:underline">hanifahzakiyyatus@gmail.com</a></p>
                 </div>
