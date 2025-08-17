@@ -158,7 +158,7 @@ export default function BukuTamu({ bahasa }) {
                 {item.nama.charAt(0).toUpperCase()}
               </div>
               <div className="flex-1">
-                <p className="text-slate-100">{item.nama}</p>
+                <p className="text-slate-100 capitalize">{item.nama}</p>
                 <p className="text-slate-300">{item.pesan}</p>
                 <p className="text-sm text-slate-500">
                   {formatTanggal(item.createdAt)}
