@@ -1,6 +1,6 @@
 # Hasza Studio - 3D Interactive Showcase
 
-Welcome to the **HZS Studio** project repository! 🚀
+Welcome to the *Hasza Studio** project repository! 🚀
 
 This project is an interactive showcase website where users can engage with the content within the site. It is built using modern technologies to provide a more engaging product exploration experience.
 
