@@ -15,7 +15,7 @@ export default function Navbar({bahasa}) {
 
   return (
     <motion.nav 
-        className="border-b border-slate-400 shadow-lg shadow-slate-500/50 bg-slate-700/60 backdrop-blur-sm font-monos w-[100%] rounded-b-2xl fixed z-40"
+        className="border-b border-slate-400 shadow-lg shadow-slate-500/50 bg-slate-800/30 backdrop-blur-sm font-monos w-[100%] rounded-b-2xl fixed z-40"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }} 
         exit={{ y: -100, opacity: 0 }} 

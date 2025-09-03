@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { hr } from "motion/react-client";
 import { useEffect, useState } from "react";
 import { useRive } from "rive-react";
 
@@ -157,7 +156,7 @@ export default function Hero({ setScrollEnabled, onBahasaChange }){
 
             </div>
 
-            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-center -mt-10 lg:mt-32 lg:justify-start ml-0" >
+            <div className=" w-full h-1/2 lg:w-1/2 lg:h-full flex items-center justify-center -mt-10 lg:mt-32 lg:justify-start ml-0 pointer-events-auto" >
                 <div className="w-[750px] h-[469px] lg:w-[850px] lg:h-[800px] pointer-events-auto">
                     <RiveNgetik />
                 </div>

@@ -1,17 +1,8 @@
 import { useState } from "react";
 import { ArrowUp } from "lucide-react";
-import { useRive } from "rive-react";
-
 
 export default function Bg() {
     const [showTooltip, setShowTooltip] = useState(null);
-
-    const {rive: riveBg, RiveComponent:RiveBg} = useRive({
-        src: "bg.riv",
-        stateMachines: "State Machine 1",
-        artboard: "Artboard",
-        autoplay: true,
-    })
 
     // Fungsi untuk scroll ke atas
     const scrollToTop = () => {
@@ -19,11 +10,14 @@ export default function Bg() {
     };
 
     return (
-        <div className="w-screen h-screen bg-slate-900 absolute">
+        <div className="w-screen h-screen absolute bg-slate-900">
+            {/* Background pakai gambar bg.webp */}
             <div className="fixed w-[100vh] h-[100vh] z-[0] lg:h-[100vw] lg:w-[100vw]">
-                 {RiveBg && (
-                    <RiveBg/>
-                    )}
+                <img 
+                    src="bg.webp" 
+                    alt="Background" 
+                    className="w-full h-full object-cover"
+                />
             </div>
 
             {/* Tombol Scroll ke Atas */}
